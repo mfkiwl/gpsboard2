@@ -1,0 +1,2340 @@
+LX51 LINKER/LOCATER V4.64.0.0                                                           05/21/2013  06:46:35  PAGE 1
+
+
+LX51 LINKER/LOCATER V4.64.0.0, INVOKED BY:
+C:\KEIL\C51\BIN\LX51.EXE .\bin\dscr.obj, .\bin\main.obj, .\bin\periph.obj, .\EZ-USB FX2LP\lib\EZUSB.LIB, .\EZ-USB FX2LP\
+>> lib\USBJmpTb.OBJ TO .\bin\GPSRx Firmware PRINT (.\lst\GPSRx Firmware.map)
+
+
+CPU MODE:     8051 MODE
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\bin\dscr.obj (DSCR)
+         COMMENT TYPE 0: AX51 V3.07d
+  .\bin\main.obj (MAIN)
+         COMMENT TYPE 0: C51 V9.51
+  .\bin\periph.obj (PERIPH)
+         COMMENT TYPE 0: C51 V9.51
+  .\EZ-USB FX2LP\lib\EZUSB.LIB (RESUME)
+         COMMENT TYPE 1: C51 Compiler
+  .\EZ-USB FX2LP\lib\EZUSB.LIB (DISCON)
+         COMMENT TYPE 1: C51 Compiler
+  .\EZ-USB FX2LP\lib\EZUSB.LIB (EZREGS)
+         COMMENT TYPE 1: C51 Compiler
+  .\EZ-USB FX2LP\lib\EZUSB.LIB (GET_STRD)
+         COMMENT TYPE 1: C51 Compiler
+  .\EZ-USB FX2LP\lib\EZUSB.LIB (SUSP)
+         COMMENT TYPE 1: A51 / ASM51 Assembler
+  .\EZ-USB FX2LP\lib\EZUSB.LIB (DELAY)
+         COMMENT TYPE 1: C51 Compiler
+  .\EZ-USB FX2LP\lib\EZUSB.LIB (DELAY1MS)
+         COMMENT TYPE 1: A51 / ASM51 Assembler
+  .\EZ-USB FX2LP\lib\USBJmpTb.OBJ (USBJMPTBL)
+         COMMENT TYPE 1: A51 / ASM51 Assembler
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+         COMMENT TYPE 1: A51 / ASM51 Assembler
+  C:\KEIL\C51\LIB\C51S.LIB (?C?ULCMP)
+         COMMENT TYPE 1: A51 / ASM51 Assembler
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CCASE)
+         COMMENT TYPE 1: A51 / ASM51 Assembler
+
+
+ACTIVE MEMORY CLASSES OF MODULE:  .\bin\GPSRx Firmware (DSCR)
+
+BASE        START       END         USED      MEMORY CLASS
+==========================================================
+C:000000H   C:000000H   C:00FFFFH   0008DEH   CODE
+I:000000H   I:000000H   I:00007FH   00002CH   DATA
+C:000000H   C:000000H   C:00FFFFH   00000AH   CONST
+I:000020H.0 I:000020H.0 I:00002FH.7 000000H.5 BIT
+X:000000H   X:000000H   X:00FFFFH   001179H   XDATA
+I:000000H   I:000000H   I:0000FFH   000001H   IDATA
+
+
+MEMORY MAP OF MODULE:  .\bin\GPSRx Firmware (DSCR)
+
+
+START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
+=========================================================================
+
+* * * * * * * * * * *   D A T A   M E M O R Y   * * * * * * * * * * * * *
+000000H   000007H   000008H   ---    AT..     DATA           "REG BANK 0"
+000008H   00001BH   000014H   BYTE   UNIT     DATA           _DATA_GROUP_
+00001CH   00001DH   000002H   BYTE   UNIT     DATA           ?DT?PERIPH
+00001EH.0 00001FH.7 000002H.0 ---    ---      **GAP**
+000020H.0 000020H.3 000000H.4 BIT    UNIT     BIT            ?BI?MAIN
+000020H.4 000020H.4 000000H.1 BIT    UNIT     BIT            _BIT_GROUP_
+000020H.5 000020H   000000H.3 ---    ---      **GAP**
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 2
+
+
+000021H   00002EH   00000EH   BYTE   UNIT     DATA           ?DT?MAIN
+00002FH   00002FH   000001H   BYTE   UNIT     IDATA          ?STACK
+
+* * * * * * * * * * *   C O D E   M E M O R Y   * * * * * * * * * * * * *
+000000H   000002H   000003H   ---    OFFS..   CODE           ?CO??C_STARTUP?0
+000003H   000031H   00002FH   BYTE   UNIT     CODE           ?PR?EZUSB_DISCON?DISCON
+000032H   000032H   000001H   BYTE   UNIT     CODE           ?PR?TD_POLL?PERIPH
+000033H   000035H   000003H   BYTE   OFFS..   CODE           ?MAIN?00033
+000036H   000041H   00000CH   BYTE   UNIT     CODE           ?PR?SPI_END?PERIPH
+000042H   000042H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP0ACK?PERIPH
+000043H   000045H   000003H   ---    OFFS..   CODE           ?CO?USBJMPTBL?0
+000046H   000051H   00000CH   BYTE   UNIT     CODE           ?C_C51STARTUP
+000052H   000052H   000001H   BYTE   UNIT     CODE           ?PR?ISR_STUB?PERIPH
+000053H   000055H   000003H   ---    OFFS..   CODE           ?CO?USBJMPTBL?1
+000056H   000306H   0002B1H   BYTE   UNIT     CODE           ?PR?SETUPCOMMAND?MAIN
+000307H   000470H   00016AH   BYTE   UNIT     CODE           ?PR?MAIN?MAIN
+000471H   00052BH   0000BBH   BYTE   UNIT     CODE           ?PR?TD_INIT?PERIPH
+00052CH   000571H   000046H   BYTE   UNIT     CODE           ?PR?_EZUSB_DELAY?DELAY
+000572H   0005AEH   00003DH   BYTE   UNIT     CODE           ?PR?ISR_HIGHSPEED?PERIPH
+0005AFH   0005E5H   000037H   BYTE   UNIT     CODE           ?C?LIB_CODE
+0005E6H   0005FDH   000018H   BYTE   UNIT     CODE           ?PR?ISR_SUDAV?PERIPH
+0005FEH   0005FFH   000002H   BYTE   UNIT     CODE           ?PR?TD_SUSPEND?PERIPH
+000600H   0006B7H   0000B8H   PAGE   UNIT     CODE           ?PR?USB_JUMP_TABLE?USBJT
+0006B8H   0006EDH   000036H   BYTE   UNIT     CODE           ?PR?ISR_URES?PERIPH
+0006EEH   0006FFH   000012H   BYTE   UNIT     CODE           ?PR?DR_GETCONFIGURATION?PERIPH
+000700H   000777H   000078H   PAGE   UNIT     CODE           DSCR
+000778H   0007A3H   00002CH   BYTE   UNIT     CODE           ?PR?_SPI_BYTEWRITE?PERIPH
+0007A4H   0007CFH   00002CH   BYTE   UNIT     CODE           ?PR?EZUSB_RESUME?RESUME
+0007D0H   0007FAH   00002BH   BYTE   UNIT     CODE           ?PR?_EZUSB_GETSTRINGDSCR?GET_STRD
+0007FBH   00081FH   000025H   BYTE   UNIT     CODE           EZUSB
+000820H   000837H   000018H   BYTE   UNIT     CODE           ?PR?ISR_SUSP?PERIPH
+000838H   00084DH   000016H   BYTE   UNIT     CODE           ?PR?ISR_SUTOK?PERIPH
+00084EH   000863H   000016H   BYTE   UNIT     CODE           ?PR?ISR_SOF?PERIPH
+000864H   000875H   000012H   BYTE   UNIT     CODE           ?PR?DR_GETINTERFACE?PERIPH
+000876H   000880H   00000BH   BYTE   UNIT     CODE           ?PR?SPI_BEGIN?PERIPH
+000881H   00088AH   00000AH   BYTE   UNIT     CODE           ?PR?HIGHSPEEDCAPABLE?MAIN
+00088BH   000894H   00000AH   BYTE   UNIT     CODE           ?PR?SPI_INIT?PERIPH
+000895H   00089CH   000008H   BYTE   UNIT     CODE           ?PR?DR_SETCONFIGURATION?PERIPH
+00089DH   0008A4H   000008H   BYTE   UNIT     CODE           ?PR?DR_SETINTERFACE?PERIPH
+0008A5H   0008ABH   000007H   BYTE   UNIT     CODE           ?PR?_SPI_DELAY?PERIPH
+0008ACH   0008AFH   000004H   BYTE   UNIT     CODE           ?PR?RESUME_ISR?MAIN
+0008B0H   0008B1H   000002H   BYTE   UNIT     CODE           ?PR?TD_RESUME?PERIPH
+0008B2H   0008B3H   000002H   BYTE   UNIT     CODE           ?PR?DR_GETDESCRIPTOR?PERIPH
+0008B4H   0008B5H   000002H   BYTE   UNIT     CODE           ?PR?DR_GETSTATUS?PERIPH
+0008B6H   0008B7H   000002H   BYTE   UNIT     CODE           ?PR?DR_CLEARFEATURE?PERIPH
+0008B8H   0008B9H   000002H   BYTE   UNIT     CODE           ?PR?DR_SETFEATURE?PERIPH
+0008BAH   0008BBH   000002H   BYTE   UNIT     CODE           ?PR?DR_VENDORCMND?PERIPH
+0008BCH   0008BCH   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP0IN?PERIPH
+0008BDH   0008BDH   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP0OUT?PERIPH
+0008BEH   0008BEH   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP1IN?PERIPH
+0008BFH   0008BFH   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP1OUT?PERIPH
+0008C0H   0008C0H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP2INOUT?PERIPH
+0008C1H   0008C1H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP4INOUT?PERIPH
+0008C2H   0008C2H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP6INOUT?PERIPH
+0008C3H   0008C3H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP8INOUT?PERIPH
+0008C4H   0008C4H   000001H   BYTE   UNIT     CODE           ?PR?ISR_IBN?PERIPH
+0008C5H   0008C5H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP0PINGNAK?PERIPH
+0008C6H   0008C6H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP1PINGNAK?PERIPH
+0008C7H   0008C7H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP2PINGNAK?PERIPH
+0008C8H   0008C8H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP4PINGNAK?PERIPH
+0008C9H   0008C9H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP6PINGNAK?PERIPH
+0008CAH   0008CAH   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP8PINGNAK?PERIPH
+0008CBH   0008CBH   000001H   BYTE   UNIT     CODE           ?PR?ISR_ERRORLIMIT?PERIPH
+0008CCH   0008CCH   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP2PIDERROR?PERIPH
+0008CDH   0008CDH   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP4PIDERROR?PERIPH
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 3
+
+
+0008CEH   0008CEH   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP6PIDERROR?PERIPH
+0008CFH   0008CFH   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP8PIDERROR?PERIPH
+0008D0H   0008D0H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP2PFLAG?PERIPH
+0008D1H   0008D1H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP4PFLAG?PERIPH
+0008D2H   0008D2H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP6PFLAG?PERIPH
+0008D3H   0008D3H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP8PFLAG?PERIPH
+0008D4H   0008D4H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP2EFLAG?PERIPH
+0008D5H   0008D5H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP4EFLAG?PERIPH
+0008D6H   0008D6H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP6EFLAG?PERIPH
+0008D7H   0008D7H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP8EFLAG?PERIPH
+0008D8H   0008D8H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP2FFLAG?PERIPH
+0008D9H   0008D9H   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP4FFLAG?PERIPH
+0008DAH   0008DAH   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP6FFLAG?PERIPH
+0008DBH   0008DBH   000001H   BYTE   UNIT     CODE           ?PR?ISR_EP8FFLAG?PERIPH
+0008DCH   0008DCH   000001H   BYTE   UNIT     CODE           ?PR?ISR_GPIFCOMPLETE?PERIPH
+0008DDH   0008DDH   000001H   BYTE   UNIT     CODE           ?PR?ISR_GPIFWAVEFORM?PERIPH
+0008DEH   0008E7H   00000AH   BYTE   UNIT     CONST          ?CO?MAIN
+
+* * * * * * * * * * *  X D A T A   M E M O R Y  * * * * * * * * * * * * *
+00E400H   00E400H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?76
+00E401H   00E47FH   00007FH   ---    ---      **GAP**
+00E480H   00E480H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?135
+00E481H   00E508H   000088H   ---    ---      **GAP**
+00E509H   00E509H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?153
+00E50AH   00E5FFH   0000F6H   ---    ---      **GAP**
+00E600H   00E600H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?2
+00E601H   00E601H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?105
+00E602H   00E602H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?145
+00E603H   00E603H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?156
+00E604H   00E604H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?54
+00E605H   00E605H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?10
+00E606H   00E606H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?180
+00E607H   00E607H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?183
+00E608H   00E608H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?134
+00E609H   00E609H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?11
+00E60AH   00E60AH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?182
+00E60BH   00E60BH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?130
+00E60CH   00E60CH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?50
+00E60DH   00E60FH   000003H   ---    ---      **GAP**
+00E610H   00E610H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?14
+00E611H   00E611H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?61
+00E612H   00E612H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?24
+00E613H   00E613H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?27
+00E614H   00E614H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?32
+00E615H   00E615H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?37
+00E616H   00E617H   000002H   ---    ---      **GAP**
+00E618H   00E618H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?83
+00E619H   00E619H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?86
+00E61AH   00E61AH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?91
+00E61BH   00E61BH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?94
+00E61CH   00E61FH   000004H   ---    ---      **GAP**
+00E620H   00E620H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?93
+00E621H   00E621H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?104
+00E622H   00E622H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?97
+00E623H   00E623H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?112
+00E624H   00E624H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?103
+00E625H   00E625H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?116
+00E626H   00E626H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?111
+00E627H   00E627H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?120
+00E628H   00E628H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?31
+00E629H   00E629H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?125
+00E62AH   00E62AH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?172
+00E62BH   00E62BH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?174
+00E62CH   00E62CH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?177
+00E62DH   00E62DH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?173
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 4
+
+
+00E62EH   00E62EH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?176
+00E62FH   00E62FH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?178
+00E630H   00E630H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?117
+00E631H   00E631H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?128
+00E632H   00E632H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?123
+00E633H   00E633H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?133
+00E634H   00E634H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?127
+00E635H   00E635H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?138
+00E636H   00E636H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?132
+00E637H   00E637H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?140
+00E638H   00E63FH   000008H   ---    ---      **GAP**
+00E640H   00E640H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?12
+00E641H   00E641H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?16
+00E642H   00E642H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?19
+00E643H   00E643H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?21
+00E644H   00E647H   000004H   ---    ---      **GAP**
+00E648H   00E648H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?158
+00E649H   00E649H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?89
+00E64AH   00E64FH   000006H   ---    ---      **GAP**
+00E650H   00E650H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?184
+00E651H   00E651H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?144
+00E652H   00E652H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?0
+00E653H   00E653H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?150
+00E654H   00E654H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?3
+00E655H   00E655H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?155
+00E656H   00E656H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?6
+00E657H   00E657H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?159
+00E658H   00E658H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?168
+00E659H   00E659H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?99
+00E65AH   00E65AH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?170
+00E65BH   00E65BH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?102
+00E65CH   00E65CH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?181
+00E65DH   00E65DH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?141
+00E65EH   00E65EH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?47
+00E65FH   00E65FH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?5
+00E660H   00E660H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?74
+00E661H   00E661H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?18
+00E662H   00E662H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?163
+00E663H   00E663H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?90
+00E664H   00E664H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?71
+00E665H   00E665H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?68
+00E666H   00E666H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?98
+00E667H   00E667H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?108
+00E668H   00E668H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?1
+00E669H   00E66FH   000007H   ---    ---      **GAP**
+00E670H   00E670H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?142
+00E671H   00E671H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?143
+00E672H   00E672H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?149
+00E673H   00E677H   000005H   ---    ---      **GAP**
+00E678H   00E678H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?13
+00E679H   00E679H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?137
+00E67AH   00E67AH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?154
+00E67BH   00E67BH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?36
+00E67CH   00E67CH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?40
+00E67DH   00E67DH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?110
+00E67EH   00E67EH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?119
+00E67FH   00E67FH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?75
+00E680H   00E680H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?4
+00E681H   00E681H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?49
+00E682H   00E682H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?166
+00E683H   00E683H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?122
+00E684H   00E684H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?41
+00E685H   00E685H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?48
+00E686H   00E686H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?169
+00E687H   00E687H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?63
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 5
+
+
+00E688H   00E689H   000002H   ---    ---      **GAP**
+00E68AH   00E68AH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?17
+00E68BH   00E68BH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?23
+00E68CH   00E68CH   000001H   ---    ---      **GAP**
+00E68DH   00E68DH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?96
+00E68EH   00E68EH   000001H   ---    ---      **GAP**
+00E68FH   00E68FH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?162
+00E690H   00E690H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?20
+00E691H   00E691H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?26
+00E692H   00E693H   000002H   ---    ---      **GAP**
+00E694H   00E694H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?22
+00E695H   00E695H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?30
+00E696H   00E697H   000002H   ---    ---      **GAP**
+00E698H   00E698H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?25
+00E699H   00E699H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?34
+00E69AH   00E69BH   000002H   ---    ---      **GAP**
+00E69CH   00E69CH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?29
+00E69DH   00E69DH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?39
+00E69EH   00E69FH   000002H   ---    ---      **GAP**
+00E6A0H   00E6A0H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?146
+00E6A1H   00E6A1H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?139
+00E6A2H   00E6A2H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?179
+00E6A3H   00E6A3H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?152
+00E6A4H   00E6A4H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?157
+00E6A5H   00E6A5H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?160
+00E6A6H   00E6A6H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?161
+00E6A7H   00E6A7H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?28
+00E6A8H   00E6A8H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?33
+00E6A9H   00E6A9H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?38
+00E6AAH   00E6AAH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?43
+00E6ABH   00E6ABH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?78
+00E6ACH   00E6ACH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?85
+00E6ADH   00E6ADH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?81
+00E6AEH   00E6AEH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?88
+00E6AFH   00E6AFH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?84
+00E6B0H   00E6B0H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?92
+00E6B1H   00E6B1H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?87
+00E6B2H   00E6B2H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?95
+00E6B3H   00E6B3H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?58
+00E6B4H   00E6B4H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?62
+00E6B5H   00E6B5H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?107
+00E6B6H   00E6B7H   000002H   ---    ---      **GAP**
+00E6B8H   00E6BFH   000008H   ---    OFFS..   XDATA          ?XD?EZREGS?171
+00E6C0H   00E6C0H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?8
+00E6C1H   00E6C1H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?151
+00E6C2H   00E6C2H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?56
+00E6C3H   00E6C3H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?148
+00E6C4H   00E6C4H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?101
+00E6C5H   00E6C5H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?115
+00E6C6H   00E6C6H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?80
+00E6C7H   00E6C7H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?52
+00E6C8H   00E6C8H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?164
+00E6C9H   00E6C9H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?165
+00E6CAH   00E6CAH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?82
+00E6CBH   00E6CBH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?46
+00E6CCH   00E6CCH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?77
+00E6CDH   00E6CDH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?66
+00E6CEH   00E6CEH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?72
+00E6CFH   00E6CFH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?70
+00E6D0H   00E6D0H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?67
+00E6D1H   00E6D1H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?65
+00E6D2H   00E6D2H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?60
+00E6D3H   00E6D3H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?121
+00E6D4H   00E6D4H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?51
+00E6D5H   00E6D9H   000005H   ---    ---      **GAP**
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 6
+
+
+00E6DAH   00E6DAH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?64
+00E6DBH   00E6DBH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?126
+00E6DCH   00E6DCH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?53
+00E6DDH   00E6E1H   000005H   ---    ---      **GAP**
+00E6E2H   00E6E2H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?69
+00E6E3H   00E6E3H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?131
+00E6E4H   00E6E4H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?55
+00E6E5H   00E6E9H   000005H   ---    ---      **GAP**
+00E6EAH   00E6EAH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?73
+00E6EBH   00E6EBH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?136
+00E6ECH   00E6ECH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?59
+00E6EDH   00E6EFH   000003H   ---    ---      **GAP**
+00E6F0H   00E6F0H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?9
+00E6F1H   00E6F1H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?167
+00E6F2H   00E6F2H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?7
+00E6F3H   00E6F3H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?175
+00E6F4H   00E6F4H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?147
+00E6F5H   00E6F5H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?42
+00E6F6H   00E6F7H   000002H   ---    ---      **GAP**
+00E6F8H   00E6F8H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?44
+00E6F9H   00E6F9H   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?15
+00E6FAH   00E6FAH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?57
+00E6FBH   00E6FBH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?100
+00E6FCH   00E6FCH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?106
+00E6FDH   00E6FDH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?109
+00E6FEH   00E6FEH   000001H   ---    OFFS..   XDATA          ?XD?EZREGS?113
+00E6FFH   00E73FH   000041H   ---    ---      **GAP**
+00E740H   00E77FH   000040H   ---    OFFS..   XDATA          ?XD?EZREGS?45
+00E780H   00E7BFH   000040H   ---    OFFS..   XDATA          ?XD?EZREGS?35
+00E7C0H   00E7FFH   000040H   ---    OFFS..   XDATA          ?XD?EZREGS?79
+00E800H   00EFFFH   000800H   ---    ---      **GAP**
+00F000H   00F3FFH   000400H   ---    OFFS..   XDATA          ?XD?EZREGS?114
+00F400H   00F7FFH   000400H   ---    OFFS..   XDATA          ?XD?EZREGS?118
+00F800H   00FBFFH   000400H   ---    OFFS..   XDATA          ?XD?EZREGS?124
+00FC00H   00FFFFH   000400H   ---    OFFS..   XDATA          ?XD?EZREGS?129
+
+
+
+OVERLAY MAP OF MODULE:   .\bin\GPSRx Firmware (DSCR)
+
+
+FUNCTION/MODULE                     BIT_GROUP   DATA_GROUP 
+--> CALLED FUNCTION/MODULE         START  STOP  START  STOP
+===========================================================
+RESUME_ISR/MAIN                    ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_SUDAV/PERIPH                   ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_SUTOK/PERIPH                   ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_SOF/PERIPH                     ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_URES/PERIPH                    ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_SUSP/PERIPH                    ----- -----  ----- -----
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 7
+
+
+
+*** NEW ROOT *********************
+
+ISR_HIGHSPEED/PERIPH               ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP0ACK/PERIPH                  ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_STUB/PERIPH                    ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP0IN/PERIPH                   ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP0OUT/PERIPH                  ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP1IN/PERIPH                   ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP1OUT/PERIPH                  ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP2INOUT/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP4INOUT/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP6INOUT/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP8INOUT/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_IBN/PERIPH                     ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP0PINGNAK/PERIPH              ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP1PINGNAK/PERIPH              ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP2PINGNAK/PERIPH              ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP4PINGNAK/PERIPH              ----- -----  ----- -----
+
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 8
+
+
+*** NEW ROOT *********************
+
+ISR_EP6PINGNAK/PERIPH              ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP8PINGNAK/PERIPH              ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_ERRORLIMIT/PERIPH              ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP2PIDERROR/PERIPH             ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP4PIDERROR/PERIPH             ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP6PIDERROR/PERIPH             ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP8PIDERROR/PERIPH             ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP2PFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP4PFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP6PFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP8PFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP2EFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP4EFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP6EFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP8EFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP2FFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 9
+
+
+
+ISR_EP4FFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP6FFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_EP8FFLAG/PERIPH                ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_GPIFCOMPLETE/PERIPH            ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+ISR_GPIFWAVEFORM/PERIPH            ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+USB_JUMP_TABLE/USBJT               ----- -----  ----- -----
+
+*** NEW ROOT *********************
+
+?C_C51STARTUP                      ----- -----  ----- -----
+  +--> MAIN/MAIN
+
+MAIN/MAIN                          ----- -----  0008H 0017H
+  +--> TD_INIT/PERIPH
+  +--> SPI_INIT/PERIPH
+  +--> EZUSB_DISCON/DISCON
+  +--> TD_POLL/PERIPH
+  +--> SETUPCOMMAND/MAIN
+  +--> TD_SUSPEND/PERIPH
+  +--> EZUSB_RESUME/RESUME
+  +--> TD_RESUME/PERIPH
+
+TD_INIT/PERIPH                     ----- -----  ----- -----
+
+SPI_INIT/PERIPH                    ----- -----  ----- -----
+
+EZUSB_DISCON/DISCON                20H.4 20H.4  ----- -----
+  +--> _EZUSB_DELAY/DELAY
+
+_EZUSB_DELAY/DELAY                 ----- -----  0018H 0019H
+
+TD_POLL/PERIPH                     ----- -----  ----- -----
+
+SETUPCOMMAND/MAIN                  ----- -----  0018H 0019H
+  +--> DR_GETDESCRIPTOR/PERIPH
+  +--> HIGHSPEEDCAPABLE/MAIN
+  +--> _EZUSB_GETSTRINGDSCR/GET_STRD
+  +--> DR_GETINTERFACE/PERIPH
+  +--> DR_SETINTERFACE/PERIPH
+  +--> DR_SETCONFIGURATION/PERIPH
+  +--> DR_GETCONFIGURATION/PERIPH
+  +--> DR_GETSTATUS/PERIPH
+  +--> ?CO?MAIN
+  +--> DR_CLEARFEATURE/PERIPH
+  +--> DR_SETFEATURE/PERIPH
+  +--> SPI_BEGIN/PERIPH
+  +--> _SPI_BYTEWRITE/PERIPH
+  +--> SPI_END/PERIPH
+  +--> _SPI_DELAY/PERIPH
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 10
+
+
+  +--> DR_VENDORCMND/PERIPH
+
+DR_GETDESCRIPTOR/PERIPH            ----- -----  ----- -----
+
+HIGHSPEEDCAPABLE/MAIN              ----- -----  ----- -----
+
+_EZUSB_GETSTRINGDSCR/GET_STRD      ----- -----  ----- -----
+
+DR_GETINTERFACE/PERIPH             ----- -----  ----- -----
+
+DR_SETINTERFACE/PERIPH             ----- -----  ----- -----
+
+DR_SETCONFIGURATION/PERIPH         ----- -----  ----- -----
+
+DR_GETCONFIGURATION/PERIPH         ----- -----  ----- -----
+
+DR_GETSTATUS/PERIPH                ----- -----  ----- -----
+
+?CO?MAIN                           ----- -----  ----- -----
+
+DR_CLEARFEATURE/PERIPH             ----- -----  ----- -----
+
+DR_SETFEATURE/PERIPH               ----- -----  ----- -----
+
+SPI_BEGIN/PERIPH                   ----- -----  ----- -----
+  +--> _SPI_DELAY/PERIPH
+
+_SPI_DELAY/PERIPH                  ----- -----  ----- -----
+
+_SPI_BYTEWRITE/PERIPH              ----- -----  001AH 001BH
+  +--> _SPI_DELAY/PERIPH
+
+SPI_END/PERIPH                     ----- -----  ----- -----
+  +--> _SPI_DELAY/PERIPH
+
+DR_VENDORCMND/PERIPH               ----- -----  ----- -----
+
+TD_SUSPEND/PERIPH                  ----- -----  ----- -----
+
+EZUSB_RESUME/RESUME                ----- -----  ----- -----
+  +--> _EZUSB_DELAY/DELAY
+
+TD_RESUME/PERIPH                   ----- -----  ----- -----
+
+
+
+PUBLIC SYMBOLS OF MODULE:  .\bin\GPSRx Firmware (DSCR)
+
+
+      VALUE       CLASS    TYPE      PUBLIC SYMBOL NAME
+      =================================================
+      010005C0H   CODE     ---       ?C?CCASE
+      00000000H   NUMBER   ---       ?C?CODESEG
+      010005AFH   CODE     ---       ?C?ULCMP
+      00000000H   NUMBER   ---       ?C?XDATASEG
+      01000307H   CODE     ---       ?C_START
+      01000000H   CODE     ---       ?C_STARTUP
+      00000020H.4 BIT      ---       ?EZUSB_Discon?BIT
+      0100052CH   CODE     ---       _EZUSB_Delay
+      010007D0H   CODE     ---       _EZUSB_GetStringDscr
+      01000778H   CODE     ---       _SPI_ByteWrite
+      010008A5H   CODE     ---       _SPI_Delay
+      0000001CH   DATA     BYTE      AlternateSetting
+      0200E606H   XDATA    BYTE      BPADDRH
+      0200E607H   XDATA    BYTE      BPADDRL
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 11
+
+
+      0200E605H   XDATA    BYTE      BREAKPT
+      0200E665H   XDATA    BYTE      CLRERRCNT
+      0000001DH   DATA     BYTE      Configuration
+      0200E600H   XDATA    BYTE      CPUCS
+      0200E6FBH   XDATA    BYTE      CT1
+      0200E6FCH   XDATA    BYTE      CT2
+      0200E6FDH   XDATA    BYTE      CT3
+      0200E6FEH   XDATA    BYTE      CT4
+      0200E6F8H   XDATA    BYTE      DBUG
+      01000700H   CODE     NEAR LAB  DEVICEDSCR
+      01000712H   CODE     NEAR LAB  DEVICEQUALDSCR
+      010008B6H   CODE     ---       DR_ClearFeature
+      010006EEH   CODE     ---       DR_GetConfiguration
+      010008B2H   CODE     ---       DR_GetDescriptor
+      01000864H   CODE     ---       DR_GetInterface
+      010008B4H   CODE     ---       DR_GetStatus
+      01000895H   CODE     ---       DR_SetConfiguration
+      010008B8H   CODE     ---       DR_SetFeature
+      0100089DH   CODE     ---       DR_SetInterface
+      010008BAH   CODE     ---       DR_VendorCmnd
+      0200E62AH   XDATA    BYTE      ECC1B0
+      0200E62BH   XDATA    BYTE      ECC1B1
+      0200E62CH   XDATA    BYTE      ECC1B2
+      0200E62DH   XDATA    BYTE      ECC2B0
+      0200E62EH   XDATA    BYTE      ECC2B1
+      0200E62FH   XDATA    BYTE      ECC2B2
+      0200E628H   XDATA    BYTE      ECCCFG
+      0200E629H   XDATA    BYTE      ECCRESET
+      0200E68AH   XDATA    BYTE      EP0BCH
+      0200E68BH   XDATA    BYTE      EP0BCL
+      0200E740H   XDATA    ---       EP0BUF
+      0200E6A0H   XDATA    BYTE      EP0CS
+      0200E68FH   XDATA    BYTE      EP1INBC
+      0200E7C0H   XDATA    ---       EP1INBUF
+      0200E611H   XDATA    BYTE      EP1INCFG
+      0200E6A2H   XDATA    BYTE      EP1INCS
+      0200E68DH   XDATA    BYTE      EP1OUTBC
+      0200E780H   XDATA    ---       EP1OUTBUF
+      0200E610H   XDATA    BYTE      EP1OUTCFG
+      0200E6A1H   XDATA    BYTE      EP1OUTCS
+      0200E620H   XDATA    BYTE      EP2AUTOINLENH
+      0200E621H   XDATA    BYTE      EP2AUTOINLENL
+      0200E690H   XDATA    BYTE      EP2BCH
+      0200E691H   XDATA    BYTE      EP2BCL
+      0200E612H   XDATA    BYTE      EP2CFG
+      0200E6A3H   XDATA    BYTE      EP2CS
+      0200E6ABH   XDATA    BYTE      EP2FIFOBCH
+      0200E6ACH   XDATA    BYTE      EP2FIFOBCL
+      0200F000H   XDATA    ---       EP2FIFOBUF
+      0200E618H   XDATA    BYTE      EP2FIFOCFG
+      0200E6A7H   XDATA    BYTE      EP2FIFOFLGS
+      0200E650H   XDATA    BYTE      EP2FIFOIE
+      0200E651H   XDATA    BYTE      EP2FIFOIRQ
+      0200E630H   XDATA    BYTE      EP2FIFOPFH
+      0200E631H   XDATA    BYTE      EP2FIFOPFL
+      0200E6D2H   XDATA    BYTE      EP2GPIFFLGSEL
+      0200E6D3H   XDATA    BYTE      EP2GPIFPFSTOP
+      0200E6D4H   XDATA    BYTE      EP2GPIFTRIG
+      0200E640H   XDATA    BYTE      EP2ISOINPKTS
+      0200E622H   XDATA    BYTE      EP4AUTOINLENH
+      0200E623H   XDATA    BYTE      EP4AUTOINLENL
+      0200E694H   XDATA    BYTE      EP4BCH
+      0200E695H   XDATA    BYTE      EP4BCL
+      0200E613H   XDATA    BYTE      EP4CFG
+      0200E6A4H   XDATA    BYTE      EP4CS
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 12
+
+
+      0200E6ADH   XDATA    BYTE      EP4FIFOBCH
+      0200E6AEH   XDATA    BYTE      EP4FIFOBCL
+      0200F400H   XDATA    ---       EP4FIFOBUF
+      0200E619H   XDATA    BYTE      EP4FIFOCFG
+      0200E6A8H   XDATA    BYTE      EP4FIFOFLGS
+      0200E652H   XDATA    BYTE      EP4FIFOIE
+      0200E653H   XDATA    BYTE      EP4FIFOIRQ
+      0200E632H   XDATA    BYTE      EP4FIFOPFH
+      0200E633H   XDATA    BYTE      EP4FIFOPFL
+      0200E6DAH   XDATA    BYTE      EP4GPIFFLGSEL
+      0200E6DBH   XDATA    BYTE      EP4GPIFPFSTOP
+      0200E6DCH   XDATA    BYTE      EP4GPIFTRIG
+      0200E641H   XDATA    BYTE      EP4ISOINPKTS
+      0200E624H   XDATA    BYTE      EP6AUTOINLENH
+      0200E625H   XDATA    BYTE      EP6AUTOINLENL
+      0200E698H   XDATA    BYTE      EP6BCH
+      0200E699H   XDATA    BYTE      EP6BCL
+      0200E614H   XDATA    BYTE      EP6CFG
+      0200E6A5H   XDATA    BYTE      EP6CS
+      0200E6AFH   XDATA    BYTE      EP6FIFOBCH
+      0200E6B0H   XDATA    BYTE      EP6FIFOBCL
+      0200F800H   XDATA    ---       EP6FIFOBUF
+      0200E61AH   XDATA    BYTE      EP6FIFOCFG
+      0200E6A9H   XDATA    BYTE      EP6FIFOFLGS
+      0200E654H   XDATA    BYTE      EP6FIFOIE
+      0200E655H   XDATA    BYTE      EP6FIFOIRQ
+      0200E634H   XDATA    BYTE      EP6FIFOPFH
+      0200E635H   XDATA    BYTE      EP6FIFOPFL
+      0200E6E2H   XDATA    BYTE      EP6GPIFFLGSEL
+      0200E6E3H   XDATA    BYTE      EP6GPIFPFSTOP
+      0200E6E4H   XDATA    BYTE      EP6GPIFTRIG
+      0200E642H   XDATA    BYTE      EP6ISOINPKTS
+      0200E626H   XDATA    BYTE      EP8AUTOINLENH
+      0200E627H   XDATA    BYTE      EP8AUTOINLENL
+      0200E69CH   XDATA    BYTE      EP8BCH
+      0200E69DH   XDATA    BYTE      EP8BCL
+      0200E615H   XDATA    BYTE      EP8CFG
+      0200E6A6H   XDATA    BYTE      EP8CS
+      0200E6B1H   XDATA    BYTE      EP8FIFOBCH
+      0200E6B2H   XDATA    BYTE      EP8FIFOBCL
+      0200FC00H   XDATA    ---       EP8FIFOBUF
+      0200E61BH   XDATA    BYTE      EP8FIFOCFG
+      0200E6AAH   XDATA    BYTE      EP8FIFOFLGS
+      0200E656H   XDATA    BYTE      EP8FIFOIE
+      0200E657H   XDATA    BYTE      EP8FIFOIRQ
+      0200E636H   XDATA    BYTE      EP8FIFOPFH
+      0200E637H   XDATA    BYTE      EP8FIFOPFL
+      0200E6EAH   XDATA    BYTE      EP8GPIFFLGSEL
+      0200E6EBH   XDATA    BYTE      EP8GPIFPFSTOP
+      0200E6ECH   XDATA    BYTE      EP8GPIFTRIG
+      0200E643H   XDATA    BYTE      EP8ISOINPKTS
+      010008DEH   CONST    ---       EPCS_Offset_Lookup_Table
+      0200E65EH   XDATA    BYTE      EPIE
+      0200E65FH   XDATA    BYTE      EPIRQ
+      0200E664H   XDATA    BYTE      ERRCNTLIM
+      0100080FH   CODE     ---       EZUSB_DELAY1MS
+      01000003H   CODE     ---       EZUSB_Discon
+      010007A4H   CODE     ---       EZUSB_Resume
+      010007FBH   CODE     ---       EZUSB_SUSP
+      0200E609H   XDATA    BYTE      FIFOPINPOLAR
+      0200E604H   XDATA    BYTE      FIFORESET
+      0200E6C8H   XDATA    BYTE      FLOWEQ0CTL
+      0200E6C9H   XDATA    BYTE      FLOWEQ1CTL
+      0200E6CAH   XDATA    BYTE      FLOWHOLDOFF
+      0200E6C7H   XDATA    BYTE      FLOWLOGIC
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 13
+
+
+      0200E6C6H   XDATA    BYTE      FLOWSTATE
+      0200E6CBH   XDATA    BYTE      FLOWSTB
+      0200E6CCH   XDATA    BYTE      FLOWSTBEDGE
+      0200E6CDH   XDATA    BYTE      FLOWSTBHPERIOD
+      0200E687H   XDATA    BYTE      FNADDR
+      01000735H   CODE     NEAR LAB  FULLSPEEDCONFIGDSCR
+      00000020H.1 BIT      BIT       GotSUD
+      0200E509H   XDATA    BYTE      GPCR2
+      0200E400H   XDATA    BYTE      GPIF_WAVE_DATA
+      0200E6F5H   XDATA    BYTE      GPIFABORT
+      0200E6C4H   XDATA    BYTE      GPIFADRH
+      0200E6C5H   XDATA    BYTE      GPIFADRL
+      0200E6C3H   XDATA    BYTE      GPIFCTLCFG
+      0200E60CH   XDATA    BYTE      GPIFHOLDAMOUNT
+      0200E6C1H   XDATA    BYTE      GPIFIDLECS
+      0200E6C2H   XDATA    BYTE      GPIFIDLECTL
+      0200E660H   XDATA    BYTE      GPIFIE
+      0200E661H   XDATA    BYTE      GPIFIRQ
+      0200E6F3H   XDATA    BYTE      GPIFREADYCFG
+      0200E6F4H   XDATA    BYTE      GPIFREADYSTAT
+      0200E6D1H   XDATA    BYTE      GPIFTCB0
+      0200E6D0H   XDATA    BYTE      GPIFTCB1
+      0200E6CFH   XDATA    BYTE      GPIFTCB2
+      0200E6CEH   XDATA    BYTE      GPIFTCB3
+      0200E6C0H   XDATA    BYTE      GPIFWFSELECT
+      01000881H   CODE     ---       HighSpeedCapable
+      0100071CH   CODE     NEAR LAB  HIGHSPEEDCONFIGDSCR
+      0200E678H   XDATA    BYTE      I2CS
+      0200E67AH   XDATA    BYTE      I2CTL
+      0200E679H   XDATA    BYTE      I2DAT
+      0200E658H   XDATA    BYTE      IBNIE
+      0200E659H   XDATA    BYTE      IBNIRQ
+      0200E601H   XDATA    BYTE      IFCONFIG
+      0200E648H   XDATA    BYTE      INPKTEND
+      0200E666H   XDATA    BYTE      INT2IVEC
+      0200E667H   XDATA    BYTE      INT4IVEC
+      0200E668H   XDATA    BYTE      INTSETUP
+      01000042H   CODE     ---       ISR_Ep0ack
+      010008BCH   CODE     ---       ISR_Ep0in
+      010008BDH   CODE     ---       ISR_Ep0out
+      010008C5H   CODE     ---       ISR_Ep0pingnak
+      010008BEH   CODE     ---       ISR_Ep1in
+      010008BFH   CODE     ---       ISR_Ep1out
+      010008C6H   CODE     ---       ISR_Ep1pingnak
+      010008D4H   CODE     ---       ISR_Ep2eflag
+      010008D8H   CODE     ---       ISR_Ep2fflag
+      010008C0H   CODE     ---       ISR_Ep2inout
+      010008D0H   CODE     ---       ISR_Ep2pflag
+      010008CCH   CODE     ---       ISR_Ep2piderror
+      010008C7H   CODE     ---       ISR_Ep2pingnak
+      010008D5H   CODE     ---       ISR_Ep4eflag
+      010008D9H   CODE     ---       ISR_Ep4fflag
+      010008C1H   CODE     ---       ISR_Ep4inout
+      010008D1H   CODE     ---       ISR_Ep4pflag
+      010008CDH   CODE     ---       ISR_Ep4piderror
+      010008C8H   CODE     ---       ISR_Ep4pingnak
+      010008D6H   CODE     ---       ISR_Ep6eflag
+      010008DAH   CODE     ---       ISR_Ep6fflag
+      010008C2H   CODE     ---       ISR_Ep6inout
+      010008D2H   CODE     ---       ISR_Ep6pflag
+      010008CEH   CODE     ---       ISR_Ep6piderror
+      010008C9H   CODE     ---       ISR_Ep6pingnak
+      010008D7H   CODE     ---       ISR_Ep8eflag
+      010008DBH   CODE     ---       ISR_Ep8fflag
+      010008C3H   CODE     ---       ISR_Ep8inout
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 14
+
+
+      010008D3H   CODE     ---       ISR_Ep8pflag
+      010008CFH   CODE     ---       ISR_Ep8piderror
+      010008CAH   CODE     ---       ISR_Ep8pingnak
+      010008CBH   CODE     ---       ISR_Errorlimit
+      010008DCH   CODE     ---       ISR_GpifComplete
+      010008DDH   CODE     ---       ISR_GpifWaveform
+      01000572H   CODE     ---       ISR_Highspeed
+      010008C4H   CODE     ---       ISR_Ibn
+      0100084EH   CODE     ---       ISR_Sof
+      01000052H   CODE     ---       ISR_Stub
+      010005E6H   CODE     ---       ISR_Sudav
+      01000820H   CODE     ---       ISR_Susp
+      01000838H   CODE     ---       ISR_Sutok
+      010006B8H   CODE     ---       ISR_Ures
+      01000307H   CODE     ---       main
+      0200E686H   XDATA    BYTE      MICROFRAME
+      0200E65AH   XDATA    BYTE      NAKIE
+      0200E65BH   XDATA    BYTE      NAKIRQ
+      0200E649H   XDATA    BYTE      OUTPKTEND
+      00000025H   DATA     WORD      pConfigDscr
+      00000023H   DATA     WORD      pDeviceDscr
+      0000002BH   DATA     WORD      pDeviceQualDscr
+      00000029H   DATA     WORD      pFullSpeedConfigDscr
+      00000021H   DATA     WORD      pHighSpeedConfigDscr
+      0200E602H   XDATA    BYTE      PINFLAGSAB
+      0200E603H   XDATA    BYTE      PINFLAGSCD
+      0200E670H   XDATA    BYTE      PORTACFG
+      0200E671H   XDATA    BYTE      PORTCCFG
+      0200E672H   XDATA    BYTE      PORTECFG
+      00000027H   DATA     WORD      pOtherConfigDscr
+      0000002DH   DATA     WORD      pStringDscr
+      0200E480H   XDATA    BYTE      RES_WAVEDATA_END
+      010008ACH   CODE     ---       resume_isr
+      0200E60BH   XDATA    BYTE      REVCTL
+      0200E60AH   XDATA    BYTE      REVID
+      00000020H.0 BIT      BIT       Rwuen
+      00000020H.2 BIT      BIT       Selfpwr
+      01000056H   CODE     ---       SetupCommand
+      0200E6B8H   XDATA    ---       SETUPDAT
+      00000020H.3 BIT      BIT       Sleep
+      01000876H   CODE     ---       SPI_Begin
+      01000036H   CODE     ---       SPI_End
+      0100088BH   CODE     ---       SPI_Init
+      0100074EH   CODE     NEAR LAB  STRINGDSCR
+      0200E6B5H   XDATA    BYTE      SUDPTRCTL
+      0200E6B3H   XDATA    BYTE      SUDPTRH
+      0200E6B4H   XDATA    BYTE      SUDPTRL
+      0200E681H   XDATA    BYTE      SUSPEND
+      01000471H   CODE     ---       TD_Init
+      01000032H   CODE     ---       TD_Poll
+      010008B0H   CODE     ---       TD_Resume
+      010005FEH   CODE     ---       TD_Suspend
+      0200E6F9H   XDATA    BYTE      TESTCFG
+      0200E683H   XDATA    BYTE      TOGCTL
+      0200E608H   XDATA    BYTE      UART230
+      0200E67DH   XDATA    BYTE      UDMACRCH
+      0200E67EH   XDATA    BYTE      UDMACRCL
+      0200E67FH   XDATA    BYTE      UDMACRCQUAL
+      00000045H   NUMBER   ---       USB_INT2AUTOVECTOR
+      00000055H   NUMBER   ---       USB_INT4AUTOVECTOR
+      01000600H   CODE     ---       USB_JUMP_TABLE
+      0200E680H   XDATA    BYTE      USBCS
+      0200E662H   XDATA    BYTE      USBERRIE
+      0200E663H   XDATA    BYTE      USBERRIRQ
+      0200E684H   XDATA    BYTE      USBFRAMEH
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 15
+
+
+      0200E685H   XDATA    BYTE      USBFRAMEL
+      0200E65CH   XDATA    BYTE      USBIE
+      0200E65DH   XDATA    BYTE      USBIRQ
+      0200E6FAH   XDATA    BYTE      USBTEST
+      01000776H   CODE     NEAR LAB  USERDSCR
+      0200E682H   XDATA    BYTE      WAKEUPCS
+      0200E67BH   XDATA    BYTE      XAUTODAT1
+      0200E67CH   XDATA    BYTE      XAUTODAT2
+      0200E6F0H   XDATA    BYTE      XGPIFSGLDATH
+      0200E6F2H   XDATA    BYTE      XGPIFSGLDATLNOX
+      0200E6F1H   XDATA    BYTE      XGPIFSGLDATLX
+
+
+
+SYMBOL TABLE OF MODULE:  .\bin\GPSRx Firmware (DSCR)
+
+      VALUE       REP       CLASS    TYPE      SYMBOL NAME
+      ====================================================
+      ---         MODULE    ---      ---       DSCR
+      01000700H   PUBLIC    CODE     NEAR LAB  DEVICEDSCR
+      01000712H   PUBLIC    CODE     NEAR LAB  DEVICEQUALDSCR
+      01000735H   PUBLIC    CODE     NEAR LAB  FULLSPEEDCONFIGDSCR
+      0100071CH   PUBLIC    CODE     NEAR LAB  HIGHSPEEDCONFIGDSCR
+      0100074EH   PUBLIC    CODE     NEAR LAB  STRINGDSCR
+      01000776H   PUBLIC    CODE     NEAR LAB  USERDSCR
+
+      ---         MODULE    ---      ---       MAIN
+      00000020H.3 PUBLIC    BIT      BIT       Sleep
+      0000002DH   PUBLIC    DATA     WORD      pStringDscr
+      0000002BH   PUBLIC    DATA     WORD      pDeviceQualDscr
+      00000020H.2 PUBLIC    BIT      BIT       Selfpwr
+      00000029H   PUBLIC    DATA     WORD      pFullSpeedConfigDscr
+      00000027H   PUBLIC    DATA     WORD      pOtherConfigDscr
+      00000025H   PUBLIC    DATA     WORD      pConfigDscr
+      00000023H   PUBLIC    DATA     WORD      pDeviceDscr
+      00000021H   PUBLIC    DATA     WORD      pHighSpeedConfigDscr
+      00000020H.1 PUBLIC    BIT      BIT       GotSUD
+      00000020H.0 PUBLIC    BIT      BIT       Rwuen
+      010008DEH   PUBLIC    CONST    ---       EPCS_Offset_Lookup_Table
+      010008ACH   PUBLIC    CODE     ---       resume_isr
+      01000056H   PUBLIC    CODE     ---       SetupCommand
+      01000881H   PUBLIC    CODE     ---       HighSpeedCapable
+      01000307H   PUBLIC    CODE     ---       main
+
+      01000307H   BLOCK     CODE     ---       LVL=0
+      01000307H   BLOCK     CODE     NEAR LAB  LVL=1
+      00000008H   SYMBOL    DATA     VOID      i
+      00000006H   SYMBOL    DATA     VOID      offset
+      0000000CH   SYMBOL    DATA     VOID      DevDescrLen
+      00000010H   SYMBOL    DATA     VOID      j
+      00000014H   SYMBOL    DATA     VOID      IntDescrAddr
+      00000016H   SYMBOL    DATA     VOID      ExtDescrAddr
+      ---         BLOCKEND  ---      ---       LVL=1
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000881H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000056H   BLOCK     CODE     ---       LVL=0
+      01000056H   BLOCK     CODE     NEAR LAB  LVL=1
+      00000001H   SYMBOL    DATA     VOID      dscr_ptr
+      00000018H   SYMBOL    DATA     VOID      i
+      00000019H   SYMBOL    DATA     VOID      c
+      ---         BLOCKEND  ---      ---       LVL=1
+      ---         BLOCKEND  ---      ---       LVL=0
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 16
+
+
+
+      010008ACH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      ---         MODULE    ---      ---       PERIPH
+      0000001DH   PUBLIC    DATA     BYTE      Configuration
+      0000001CH   PUBLIC    DATA     BYTE      AlternateSetting
+      010008DDH   PUBLIC    CODE     ---       ISR_GpifWaveform
+      010008DCH   PUBLIC    CODE     ---       ISR_GpifComplete
+      010008DBH   PUBLIC    CODE     ---       ISR_Ep8fflag
+      010008DAH   PUBLIC    CODE     ---       ISR_Ep6fflag
+      010008D9H   PUBLIC    CODE     ---       ISR_Ep4fflag
+      010008D8H   PUBLIC    CODE     ---       ISR_Ep2fflag
+      010008D7H   PUBLIC    CODE     ---       ISR_Ep8eflag
+      010008D6H   PUBLIC    CODE     ---       ISR_Ep6eflag
+      010008D5H   PUBLIC    CODE     ---       ISR_Ep4eflag
+      010008D4H   PUBLIC    CODE     ---       ISR_Ep2eflag
+      010008D3H   PUBLIC    CODE     ---       ISR_Ep8pflag
+      010008D2H   PUBLIC    CODE     ---       ISR_Ep6pflag
+      010008D1H   PUBLIC    CODE     ---       ISR_Ep4pflag
+      010008D0H   PUBLIC    CODE     ---       ISR_Ep2pflag
+      010008CFH   PUBLIC    CODE     ---       ISR_Ep8piderror
+      010008CEH   PUBLIC    CODE     ---       ISR_Ep6piderror
+      010008CDH   PUBLIC    CODE     ---       ISR_Ep4piderror
+      010008CCH   PUBLIC    CODE     ---       ISR_Ep2piderror
+      010008CBH   PUBLIC    CODE     ---       ISR_Errorlimit
+      010008CAH   PUBLIC    CODE     ---       ISR_Ep8pingnak
+      010008C9H   PUBLIC    CODE     ---       ISR_Ep6pingnak
+      010008C8H   PUBLIC    CODE     ---       ISR_Ep4pingnak
+      010008C7H   PUBLIC    CODE     ---       ISR_Ep2pingnak
+      010008C6H   PUBLIC    CODE     ---       ISR_Ep1pingnak
+      010008C5H   PUBLIC    CODE     ---       ISR_Ep0pingnak
+      010008C4H   PUBLIC    CODE     ---       ISR_Ibn
+      010008C3H   PUBLIC    CODE     ---       ISR_Ep8inout
+      010008C2H   PUBLIC    CODE     ---       ISR_Ep6inout
+      010008C1H   PUBLIC    CODE     ---       ISR_Ep4inout
+      010008C0H   PUBLIC    CODE     ---       ISR_Ep2inout
+      010008BFH   PUBLIC    CODE     ---       ISR_Ep1out
+      010008BEH   PUBLIC    CODE     ---       ISR_Ep1in
+      010008BDH   PUBLIC    CODE     ---       ISR_Ep0out
+      010008BCH   PUBLIC    CODE     ---       ISR_Ep0in
+      01000052H   PUBLIC    CODE     ---       ISR_Stub
+      01000042H   PUBLIC    CODE     ---       ISR_Ep0ack
+      01000572H   PUBLIC    CODE     ---       ISR_Highspeed
+      01000820H   PUBLIC    CODE     ---       ISR_Susp
+      010006B8H   PUBLIC    CODE     ---       ISR_Ures
+      0100084EH   PUBLIC    CODE     ---       ISR_Sof
+      01000838H   PUBLIC    CODE     ---       ISR_Sutok
+      010005E6H   PUBLIC    CODE     ---       ISR_Sudav
+      010008BAH   PUBLIC    CODE     ---       DR_VendorCmnd
+      010008B8H   PUBLIC    CODE     ---       DR_SetFeature
+      010008B6H   PUBLIC    CODE     ---       DR_ClearFeature
+      010008B4H   PUBLIC    CODE     ---       DR_GetStatus
+      01000864H   PUBLIC    CODE     ---       DR_GetInterface
+      0100089DH   PUBLIC    CODE     ---       DR_SetInterface
+      010006EEH   PUBLIC    CODE     ---       DR_GetConfiguration
+      01000895H   PUBLIC    CODE     ---       DR_SetConfiguration
+      010008B2H   PUBLIC    CODE     ---       DR_GetDescriptor
+      010008A5H   PUBLIC    CODE     ---       _SPI_Delay
+      01000778H   PUBLIC    CODE     ---       _SPI_ByteWrite
+      01000036H   PUBLIC    CODE     ---       SPI_End
+      01000876H   PUBLIC    CODE     ---       SPI_Begin
+      0100088BH   PUBLIC    CODE     ---       SPI_Init
+      010008B0H   PUBLIC    CODE     ---       TD_Resume
+      010005FEH   PUBLIC    CODE     ---       TD_Suspend
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 17
+
+
+      01000032H   PUBLIC    CODE     ---       TD_Poll
+      01000471H   PUBLIC    CODE     ---       TD_Init
+
+      01000471H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000032H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010005FEH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008B0H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      0100088BH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000876H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000036H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000778H   BLOCK     CODE     ---       LVL=0
+      0100077AH   BLOCK     CODE     NEAR LAB  LVL=1
+      0000001BH   SYMBOL    DATA     VOID      i
+      ---         BLOCKEND  ---      ---       LVL=1
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008A5H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008B2H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000895H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010006EEH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      0100089DH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000864H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008B4H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008B6H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008B8H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008BAH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010005E6H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000838H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 18
+
+
+
+      0100084EH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010006B8H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000820H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000572H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000042H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000052H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008BCH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008BDH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008BEH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008BFH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008C0H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008C1H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008C2H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008C3H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008C4H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008C5H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008C6H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008C7H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008C8H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008C9H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008CAH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008CBH   BLOCK     CODE     ---       LVL=0
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 19
+
+
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008CCH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008CDH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008CEH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008CFH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008D0H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008D1H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008D2H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008D3H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008D4H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008D5H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008D6H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008D7H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008D8H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008D9H   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008DAH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008DBH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008DCH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      010008DDH   BLOCK     CODE     ---       LVL=0
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      ---         MODULE    ---      ---       RESUME
+      010007A4H   PUBLIC    CODE     ---       EZUSB_RESUME
+      00000000H   SYMBOL    CODE     WORD      _ICE_DUMMY_
+      010007A4H   BLOCK     ---      ---       LVL=1
+      010007A4H   LINE      CODE     ---       #38
+      010007A4H   LINE      CODE     ---       #39
+      010007A4H   LINE      CODE     ---       #40
+      010007BAH   LINE      CODE     ---       #42
+      010007BAH   LINE      CODE     ---       #43
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 20
+
+
+      010007C1H   LINE      CODE     ---       #44
+      010007C8H   LINE      CODE     ---       #45
+      010007CFH   LINE      CODE     ---       #46
+      010007CFH   LINE      CODE     ---       #47
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      ---         MODULE    ---      ---       DISCON
+      00000020H.4 PUBLIC    BIT      ---       ?EZUSB_DISCON?BIT
+      01000003H   PUBLIC    CODE     ---       EZUSB_DISCON
+      00000000H   SYMBOL    CODE     WORD      _ICE_DUMMY_
+      01000003H   BLOCK     ---      ---       LVL=1
+      00000020H.4 SYMBOL    BIT      BIT       renum
+      01000003H   LINE      CODE     ---       #39
+      01000003H   LINE      CODE     ---       #40
+      01000003H   LINE      CODE     ---       #42
+      01000006H   LINE      CODE     ---       #43
+      0100000FH   LINE      CODE     ---       #45
+      01000016H   LINE      CODE     ---       #47
+      0100001DH   LINE      CODE     ---       #49
+      01000023H   LINE      CODE     ---       #50
+      01000027H   LINE      CODE     ---       #51
+      0100002AH   LINE      CODE     ---       #53
+      01000031H   LINE      CODE     ---       #54
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      ---         MODULE    ---      ---       EZREGS
+      0200E650H   PUBLIC    XDATA    BYTE      EP2FIFOIE
+      0200E607H   PUBLIC    XDATA    BYTE      BPADDRL
+      0200E60AH   PUBLIC    XDATA    BYTE      REVID
+      0200E65CH   PUBLIC    XDATA    BYTE      USBIE
+      0200E606H   PUBLIC    XDATA    BYTE      BPADDRH
+      0200E6A2H   PUBLIC    XDATA    BYTE      EP1INCS
+      0200E62FH   PUBLIC    XDATA    BYTE      ECC2B2
+      0200E62CH   PUBLIC    XDATA    BYTE      ECC1B2
+      0200E62EH   PUBLIC    XDATA    BYTE      ECC2B1
+      0200E6F3H   PUBLIC    XDATA    BYTE      GPIFREADYCFG
+      0200E62BH   PUBLIC    XDATA    BYTE      ECC1B1
+      0200E62DH   PUBLIC    XDATA    BYTE      ECC2B0
+      0200E62AH   PUBLIC    XDATA    BYTE      ECC1B0
+      0200E6B8H   PUBLIC    XDATA    ---       SETUPDAT
+      0200E65AH   PUBLIC    XDATA    BYTE      NAKIE
+      0200E686H   PUBLIC    XDATA    BYTE      MICROFRAME
+      0200E658H   PUBLIC    XDATA    BYTE      IBNIE
+      0200E6F1H   PUBLIC    XDATA    BYTE      XGPIFSGLDATLX
+      0200E682H   PUBLIC    XDATA    BYTE      WAKEUPCS
+      0200E6C9H   PUBLIC    XDATA    BYTE      FLOWEQ1CTL
+      0200E6C8H   PUBLIC    XDATA    BYTE      FLOWEQ0CTL
+      0200E662H   PUBLIC    XDATA    BYTE      USBERRIE
+      0200E68FH   PUBLIC    XDATA    BYTE      EP1INBC
+      0200E6A6H   PUBLIC    XDATA    BYTE      EP8CS
+      0200E6A5H   PUBLIC    XDATA    BYTE      EP6CS
+      0200E657H   PUBLIC    XDATA    BYTE      EP8FIFOIRQ
+      0200E648H   PUBLIC    XDATA    BYTE      INPKTEND
+      0200E6A4H   PUBLIC    XDATA    BYTE      EP4CS
+      0200E603H   PUBLIC    XDATA    BYTE      PINFLAGSCD
+      0200E655H   PUBLIC    XDATA    BYTE      EP6FIFOIRQ
+      0200E67AH   PUBLIC    XDATA    BYTE      I2CTL
+      0200E509H   PUBLIC    XDATA    BYTE      GPCR2
+      0200E6A3H   PUBLIC    XDATA    BYTE      EP2CS
+      0200E6C1H   PUBLIC    XDATA    BYTE      GPIFIDLECS
+      0200E653H   PUBLIC    XDATA    BYTE      EP4FIFOIRQ
+      0200E672H   PUBLIC    XDATA    BYTE      PORTECFG
+      0200E6C3H   PUBLIC    XDATA    BYTE      GPIFCTLCFG
+      0200E6F4H   PUBLIC    XDATA    BYTE      GPIFREADYSTAT
+      0200E6A0H   PUBLIC    XDATA    BYTE      EP0CS
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 21
+
+
+      0200E602H   PUBLIC    XDATA    BYTE      PINFLAGSAB
+      0200E651H   PUBLIC    XDATA    BYTE      EP2FIFOIRQ
+      0200E671H   PUBLIC    XDATA    BYTE      PORTCCFG
+      0200E670H   PUBLIC    XDATA    BYTE      PORTACFG
+      0200E65DH   PUBLIC    XDATA    BYTE      USBIRQ
+      0200E637H   PUBLIC    XDATA    BYTE      EP8FIFOPFL
+      0200E6A1H   PUBLIC    XDATA    BYTE      EP1OUTCS
+      0200E635H   PUBLIC    XDATA    BYTE      EP6FIFOPFL
+      0200E679H   PUBLIC    XDATA    BYTE      I2DAT
+      0200E6EBH   PUBLIC    XDATA    BYTE      EP8GPIFPFSTOP
+      0200E480H   PUBLIC    XDATA    BYTE      RES_WAVEDATA_END
+      0200E608H   PUBLIC    XDATA    BYTE      UART230
+      0200E633H   PUBLIC    XDATA    BYTE      EP4FIFOPFL
+      0200E636H   PUBLIC    XDATA    BYTE      EP8FIFOPFH
+      0200E6E3H   PUBLIC    XDATA    BYTE      EP6GPIFPFSTOP
+      0200E60BH   PUBLIC    XDATA    BYTE      REVCTL
+      0200FC00H   PUBLIC    XDATA    ---       EP8FIFOBUF
+      0200E631H   PUBLIC    XDATA    BYTE      EP2FIFOPFL
+      0200E634H   PUBLIC    XDATA    BYTE      EP6FIFOPFH
+      0200E6DBH   PUBLIC    XDATA    BYTE      EP4GPIFPFSTOP
+      0200E629H   PUBLIC    XDATA    BYTE      ECCRESET
+      0200F800H   PUBLIC    XDATA    ---       EP6FIFOBUF
+      0200E632H   PUBLIC    XDATA    BYTE      EP4FIFOPFH
+      0200E683H   PUBLIC    XDATA    BYTE      TOGCTL
+      0200E6D3H   PUBLIC    XDATA    BYTE      EP2GPIFPFSTOP
+      0200E627H   PUBLIC    XDATA    BYTE      EP8AUTOINLENL
+      0200E67EH   PUBLIC    XDATA    BYTE      UDMACRCL
+      0200F400H   PUBLIC    XDATA    ---       EP4FIFOBUF
+      0200E630H   PUBLIC    XDATA    BYTE      EP2FIFOPFH
+      0200E625H   PUBLIC    XDATA    BYTE      EP6AUTOINLENL
+      0200E6C5H   PUBLIC    XDATA    BYTE      GPIFADRL
+      0200F000H   PUBLIC    XDATA    ---       EP2FIFOBUF
+      0200E6FEH   PUBLIC    XDATA    BYTE      CT4
+      0200E623H   PUBLIC    XDATA    BYTE      EP4AUTOINLENL
+      0200E626H   PUBLIC    XDATA    BYTE      EP8AUTOINLENH
+      0200E67DH   PUBLIC    XDATA    BYTE      UDMACRCH
+      0200E6FDH   PUBLIC    XDATA    BYTE      CT3
+      0200E667H   PUBLIC    XDATA    BYTE      INT4IVEC
+      0200E6B5H   PUBLIC    XDATA    BYTE      SUDPTRCTL
+      0200E6FCH   PUBLIC    XDATA    BYTE      CT2
+      0200E601H   PUBLIC    XDATA    BYTE      IFCONFIG
+      0200E621H   PUBLIC    XDATA    BYTE      EP2AUTOINLENL
+      0200E624H   PUBLIC    XDATA    BYTE      EP6AUTOINLENH
+      0200E65BH   PUBLIC    XDATA    BYTE      NAKIRQ
+      0200E6C4H   PUBLIC    XDATA    BYTE      GPIFADRH
+      0200E6FBH   PUBLIC    XDATA    BYTE      CT1
+      0200E659H   PUBLIC    XDATA    BYTE      IBNIRQ
+      0200E666H   PUBLIC    XDATA    BYTE      INT2IVEC
+      0200E622H   PUBLIC    XDATA    BYTE      EP4AUTOINLENH
+      0200E68DH   PUBLIC    XDATA    BYTE      EP1OUTBC
+      0200E6B2H   PUBLIC    XDATA    BYTE      EP8FIFOBCL
+      0200E61BH   PUBLIC    XDATA    BYTE      EP8FIFOCFG
+      0200E620H   PUBLIC    XDATA    BYTE      EP2AUTOINLENH
+      0200E6B0H   PUBLIC    XDATA    BYTE      EP6FIFOBCL
+      0200E61AH   PUBLIC    XDATA    BYTE      EP6FIFOCFG
+      0200E663H   PUBLIC    XDATA    BYTE      USBERRIRQ
+      0200E649H   PUBLIC    XDATA    BYTE      OUTPKTEND
+      0200E6AEH   PUBLIC    XDATA    BYTE      EP4FIFOBCL
+      0200E6B1H   PUBLIC    XDATA    BYTE      EP8FIFOBCH
+      0200E619H   PUBLIC    XDATA    BYTE      EP4FIFOCFG
+      0200E6ACH   PUBLIC    XDATA    BYTE      EP2FIFOBCL
+      0200E6AFH   PUBLIC    XDATA    BYTE      EP6FIFOBCH
+      0200E618H   PUBLIC    XDATA    BYTE      EP2FIFOCFG
+      0200E6CAH   PUBLIC    XDATA    BYTE      FLOWHOLDOFF
+      0200E6ADH   PUBLIC    XDATA    BYTE      EP4FIFOBCH
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 22
+
+
+      0200E6C6H   PUBLIC    XDATA    BYTE      FLOWSTATE
+      0200E7C0H   PUBLIC    XDATA    ---       EP1INBUF
+      0200E6ABH   PUBLIC    XDATA    BYTE      EP2FIFOBCH
+      0200E6CCH   PUBLIC    XDATA    BYTE      FLOWSTBEDGE
+      0200E400H   PUBLIC    XDATA    BYTE      GPIF_WAVE_DATA
+      0200E67FH   PUBLIC    XDATA    BYTE      UDMACRCQUAL
+      0200E660H   PUBLIC    XDATA    BYTE      GPIFIE
+      0200E6EAH   PUBLIC    XDATA    BYTE      EP8GPIFFLGSEL
+      0200E6CEH   PUBLIC    XDATA    BYTE      GPIFTCB3
+      0200E664H   PUBLIC    XDATA    BYTE      ERRCNTLIM
+      0200E6CFH   PUBLIC    XDATA    BYTE      GPIFTCB2
+      0200E6E2H   PUBLIC    XDATA    BYTE      EP6GPIFFLGSEL
+      0200E665H   PUBLIC    XDATA    BYTE      CLRERRCNT
+      0200E6D0H   PUBLIC    XDATA    BYTE      GPIFTCB1
+      0200E6CDH   PUBLIC    XDATA    BYTE      FLOWSTBHPERIOD
+      0200E6D1H   PUBLIC    XDATA    BYTE      GPIFTCB0
+      0200E6DAH   PUBLIC    XDATA    BYTE      EP4GPIFFLGSEL
+      0200E687H   PUBLIC    XDATA    BYTE      FNADDR
+      0200E6B4H   PUBLIC    XDATA    BYTE      SUDPTRL
+      0200E611H   PUBLIC    XDATA    BYTE      EP1INCFG
+      0200E6D2H   PUBLIC    XDATA    BYTE      EP2GPIFFLGSEL
+      0200E6ECH   PUBLIC    XDATA    BYTE      EP8GPIFTRIG
+      0200E6B3H   PUBLIC    XDATA    BYTE      SUDPTRH
+      0200E6FAH   PUBLIC    XDATA    BYTE      USBTEST
+      0200E6C2H   PUBLIC    XDATA    BYTE      GPIFIDLECTL
+      0200E6E4H   PUBLIC    XDATA    BYTE      EP6GPIFTRIG
+      0200E604H   PUBLIC    XDATA    BYTE      FIFORESET
+      0200E6DCH   PUBLIC    XDATA    BYTE      EP4GPIFTRIG
+      0200E6C7H   PUBLIC    XDATA    BYTE      FLOWLOGIC
+      0200E6D4H   PUBLIC    XDATA    BYTE      EP2GPIFTRIG
+      0200E60CH   PUBLIC    XDATA    BYTE      GPIFHOLDAMOUNT
+      0200E681H   PUBLIC    XDATA    BYTE      SUSPEND
+      0200E685H   PUBLIC    XDATA    BYTE      USBFRAMEL
+      0200E65EH   PUBLIC    XDATA    BYTE      EPIE
+      0200E6CBH   PUBLIC    XDATA    BYTE      FLOWSTB
+      0200E740H   PUBLIC    XDATA    ---       EP0BUF
+      0200E6F8H   PUBLIC    XDATA    BYTE      DBUG
+      0200E6AAH   PUBLIC    XDATA    BYTE      EP8FIFOFLGS
+      0200E6F5H   PUBLIC    XDATA    BYTE      GPIFABORT
+      0200E684H   PUBLIC    XDATA    BYTE      USBFRAMEH
+      0200E67CH   PUBLIC    XDATA    BYTE      XAUTODAT2
+      0200E69DH   PUBLIC    XDATA    BYTE      EP8BCL
+      0200E6A9H   PUBLIC    XDATA    BYTE      EP6FIFOFLGS
+      0200E615H   PUBLIC    XDATA    BYTE      EP8CFG
+      0200E67BH   PUBLIC    XDATA    BYTE      XAUTODAT1
+      0200E780H   PUBLIC    XDATA    ---       EP1OUTBUF
+      0200E699H   PUBLIC    XDATA    BYTE      EP6BCL
+      0200E6A8H   PUBLIC    XDATA    BYTE      EP4FIFOFLGS
+      0200E614H   PUBLIC    XDATA    BYTE      EP6CFG
+      0200E628H   PUBLIC    XDATA    BYTE      ECCCFG
+      0200E695H   PUBLIC    XDATA    BYTE      EP4BCL
+      0200E69CH   PUBLIC    XDATA    BYTE      EP8BCH
+      0200E6A7H   PUBLIC    XDATA    BYTE      EP2FIFOFLGS
+      0200E613H   PUBLIC    XDATA    BYTE      EP4CFG
+      0200E691H   PUBLIC    XDATA    BYTE      EP2BCL
+      0200E698H   PUBLIC    XDATA    BYTE      EP6BCH
+      0200E612H   PUBLIC    XDATA    BYTE      EP2CFG
+      0200E68BH   PUBLIC    XDATA    BYTE      EP0BCL
+      0200E694H   PUBLIC    XDATA    BYTE      EP4BCH
+      0200E643H   PUBLIC    XDATA    BYTE      EP8ISOINPKTS
+      0200E690H   PUBLIC    XDATA    BYTE      EP2BCH
+      0200E642H   PUBLIC    XDATA    BYTE      EP6ISOINPKTS
+      0200E661H   PUBLIC    XDATA    BYTE      GPIFIRQ
+      0200E68AH   PUBLIC    XDATA    BYTE      EP0BCH
+      0200E641H   PUBLIC    XDATA    BYTE      EP4ISOINPKTS
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 23
+
+
+      0200E6F9H   PUBLIC    XDATA    BYTE      TESTCFG
+      0200E610H   PUBLIC    XDATA    BYTE      EP1OUTCFG
+      0200E678H   PUBLIC    XDATA    BYTE      I2CS
+      0200E640H   PUBLIC    XDATA    BYTE      EP2ISOINPKTS
+      0200E609H   PUBLIC    XDATA    BYTE      FIFOPINPOLAR
+      0200E605H   PUBLIC    XDATA    BYTE      BREAKPT
+      0200E6F0H   PUBLIC    XDATA    BYTE      XGPIFSGLDATH
+      0200E6C0H   PUBLIC    XDATA    BYTE      GPIFWFSELECT
+      0200E6F2H   PUBLIC    XDATA    BYTE      XGPIFSGLDATLNOX
+      0200E656H   PUBLIC    XDATA    BYTE      EP8FIFOIE
+      0200E65FH   PUBLIC    XDATA    BYTE      EPIRQ
+      0200E680H   PUBLIC    XDATA    BYTE      USBCS
+      0200E654H   PUBLIC    XDATA    BYTE      EP6FIFOIE
+      0200E600H   PUBLIC    XDATA    BYTE      CPUCS
+      0200E668H   PUBLIC    XDATA    BYTE      INTSETUP
+      0200E652H   PUBLIC    XDATA    BYTE      EP4FIFOIE
+      00000000H   SYMBOL    CODE     WORD      _ICE_DUMMY_
+
+      ---         MODULE    ---      ---       GET_STRD
+      010007D0H   PUBLIC    CODE     ---       _EZUSB_GETSTRINGDSCR
+      00000000H   SYMBOL    CODE     WORD      _ICE_DUMMY_
+      010007D0H   BLOCK     ---      ---       LVL=1
+      00000001H   SYMBOL    DATA     BYTE      StrIdx
+      010007D2H   BLOCK     ---      ---       LVL=2
+      00000006H   SYMBOL    DATA     ---       dscr
+      ---         BLOCKEND  ---      ---       LVL=1
+      010007D0H   LINE      CODE     ---       #38
+      010007D2H   LINE      CODE     ---       #39
+      010007D2H   LINE      CODE     ---       #42
+      010007D6H   LINE      CODE     ---       #44
+      010007E0H   LINE      CODE     ---       #45
+      010007E0H   LINE      CODE     ---       #46
+      010007E6H   LINE      CODE     ---       #47
+      010007E7H   LINE      CODE     ---       #48
+      010007F5H   LINE      CODE     ---       #49
+      010007F7H   LINE      CODE     ---       #51
+      010007FAH   LINE      CODE     ---       #52
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      ---         MODULE    ---      ---       SUSP
+      010007FBH   PUBLIC    CODE     ---       EZUSB_SUSP
+      000000D0H.6 SYMBOL    BIT      ---       AC
+      000000E0H   SYMBOL    DATA     ---       ACC
+      0000009AH   SYMBOL    DATA     ---       APTR1H
+      0000009BH   SYMBOL    DATA     ---       APTR1L
+      0000009AH   SYMBOL    DATA     ---       AUTOPTR1H
+      0000009BH   SYMBOL    DATA     ---       AUTOPTR1L
+      0000009AH   SYMBOL    DATA     ---       AUTOPTRH1
+      0000009DH   SYMBOL    DATA     ---       AUTOPTRH2
+      0000009BH   SYMBOL    DATA     ---       AUTOPTRL1
+      0000009EH   SYMBOL    DATA     ---       AUTOPTRL2
+      000000AFH   SYMBOL    DATA     ---       AUTOPTRSETUP
+      000000F0H   SYMBOL    DATA     ---       B
+      0200E606H   SYMBOL    XDATA    ---       BPADDRH
+      0200E607H   SYMBOL    XDATA    ---       BPADDRL
+      0200E605H   SYMBOL    XDATA    ---       BREAKPT
+      0000008EH   SYMBOL    DATA     ---       CKCON
+      0200E665H   SYMBOL    XDATA    ---       CLRERRCNT
+      0200E600H   SYMBOL    XDATA    ---       CPUCS
+      000000C8H.0 SYMBOL    BIT      ---       CP_RL2
+      0200E6FBH   SYMBOL    XDATA    ---       CT1
+      0200E6FCH   SYMBOL    XDATA    ---       CT2
+      0200E6FDH   SYMBOL    XDATA    ---       CT3
+      0200E6FEH   SYMBOL    XDATA    ---       CT4
+      000000D0H.7 SYMBOL    BIT      ---       CY
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 24
+
+
+      000000C8H.1 SYMBOL    BIT      ---       C_T2
+      0200E6F8H   SYMBOL    XDATA    ---       DBUG
+      00000083H   SYMBOL    DATA     ---       DPH
+      00000085H   SYMBOL    DATA     ---       DPH1
+      00000082H   SYMBOL    DATA     ---       DPL
+      00000084H   SYMBOL    DATA     ---       DPL1
+      00000086H   SYMBOL    DATA     ---       DPS
+      000000A8H.7 SYMBOL    BIT      ---       EA
+      0200E62AH   SYMBOL    XDATA    ---       ECC1B0
+      0200E62BH   SYMBOL    XDATA    ---       ECC1B1
+      0200E62CH   SYMBOL    XDATA    ---       ECC1B2
+      0200E62DH   SYMBOL    XDATA    ---       ECC2B0
+      0200E62EH   SYMBOL    XDATA    ---       ECC2B1
+      0200E62FH   SYMBOL    XDATA    ---       ECC2B2
+      0200E628H   SYMBOL    XDATA    ---       ECCCFG
+      0200E629H   SYMBOL    XDATA    ---       ECCRESET
+      000000E8H.1 SYMBOL    BIT      ---       EI2C
+      000000D8H   SYMBOL    DATA     ---       EICON
+      000000E8H   SYMBOL    DATA     ---       EIE
+      000000E8H.2 SYMBOL    BIT      ---       EIEX4
+      000000E8H.3 SYMBOL    BIT      ---       EIEX5
+      000000E8H.4 SYMBOL    BIT      ---       EIEX6
+      000000F8H   SYMBOL    DATA     ---       EIP
+      000000F8H.2 SYMBOL    BIT      ---       EIPX4
+      000000F8H.3 SYMBOL    BIT      ---       EIPX5
+      000000F8H.4 SYMBOL    BIT      ---       EIPX6
+      000000BAH   SYMBOL    DATA     ---       EP01STAT
+      0200E68AH   SYMBOL    XDATA    ---       EP0BCH
+      0200E68BH   SYMBOL    XDATA    ---       EP0BCL
+      0200E740H   SYMBOL    XDATA    ---       EP0BUF
+      0200E6A0H   SYMBOL    XDATA    ---       EP0CS
+      0200E780H   SYMBOL    XDATA    ---       EP10UTBUF
+      0200E68FH   SYMBOL    XDATA    ---       EP1INBC
+      0200E7C0H   SYMBOL    XDATA    ---       EP1INBUF
+      0200E611H   SYMBOL    XDATA    ---       EP1INCFG
+      0200E6A2H   SYMBOL    XDATA    ---       EP1INCS
+      0200E68DH   SYMBOL    XDATA    ---       EP1OUTBC
+      0200E610H   SYMBOL    XDATA    ---       EP1OUTCFG
+      0200E6A1H   SYMBOL    XDATA    ---       EP1OUTCS
+      000000AAH   SYMBOL    DATA     ---       EP2468STAT
+      000000ABH   SYMBOL    DATA     ---       EP24FIFOFLGS
+      0200E620H   SYMBOL    XDATA    ---       EP2AUTOINLENH
+      0200E621H   SYMBOL    XDATA    ---       EP2AUTOINLENL
+      0200E690H   SYMBOL    XDATA    ---       EP2BCH
+      0200E691H   SYMBOL    XDATA    ---       EP2BCL
+      0200E612H   SYMBOL    XDATA    ---       EP2CFG
+      0200E6A3H   SYMBOL    XDATA    ---       EP2CS
+      0200E6ABH   SYMBOL    XDATA    ---       EP2FIFOBCH
+      0200E6ACH   SYMBOL    XDATA    ---       EP2FIFOBCL
+      0200F000H   SYMBOL    XDATA    ---       EP2FIFOBUF
+      0200E618H   SYMBOL    XDATA    ---       EP2FIFOCFG
+      0200E6A7H   SYMBOL    XDATA    ---       EP2FIFOFLGS
+      0200E650H   SYMBOL    XDATA    ---       EP2FIFOIE
+      0200E651H   SYMBOL    XDATA    ---       EP2FIFOIRQ
+      0200E630H   SYMBOL    XDATA    ---       EP2FIFOPFH
+      0200E631H   SYMBOL    XDATA    ---       EP2FIFOPFL
+      0200E6D2H   SYMBOL    XDATA    ---       EP2GPIFFLGSEL
+      0200E6D3H   SYMBOL    XDATA    ---       EP2GPIFPFSTOP
+      0200E6D0H   SYMBOL    XDATA    ---       EP2GPIFTCH
+      0200E6D1H   SYMBOL    XDATA    ---       EP2GPIFTCL
+      0200E6D4H   SYMBOL    XDATA    ---       EP2GPIFTRIG
+      0200E640H   SYMBOL    XDATA    ---       EP2ISOINPKTS
+      0200E622H   SYMBOL    XDATA    ---       EP4AUTOINLENH
+      0200E623H   SYMBOL    XDATA    ---       EP4AUTOINLENL
+      0200E694H   SYMBOL    XDATA    ---       EP4BCH
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 25
+
+
+      0200E695H   SYMBOL    XDATA    ---       EP4BCL
+      0200E613H   SYMBOL    XDATA    ---       EP4CFG
+      0200E6A4H   SYMBOL    XDATA    ---       EP4CS
+      0200E6ADH   SYMBOL    XDATA    ---       EP4FIFOBCH
+      0200E6AEH   SYMBOL    XDATA    ---       EP4FIFOBCL
+      0200F400H   SYMBOL    XDATA    ---       EP4FIFOBUF
+      0200E619H   SYMBOL    XDATA    ---       EP4FIFOCFG
+      0200E6A8H   SYMBOL    XDATA    ---       EP4FIFOFLGS
+      0200E652H   SYMBOL    XDATA    ---       EP4FIFOIE
+      0200E653H   SYMBOL    XDATA    ---       EP4FIFOIRQ
+      0200E632H   SYMBOL    XDATA    ---       EP4FIFOPFH
+      0200E633H   SYMBOL    XDATA    ---       EP4FIFOPFL
+      0200E6DAH   SYMBOL    XDATA    ---       EP4GPIFFLGSEL
+      0200E6DBH   SYMBOL    XDATA    ---       EP4GPIFPFSTOP
+      0200E6D0H   SYMBOL    XDATA    ---       EP4GPIFTCH
+      0200E6D1H   SYMBOL    XDATA    ---       EP4GPIFTCL
+      0200E6DCH   SYMBOL    XDATA    ---       EP4GPIFTRIG
+      0200E641H   SYMBOL    XDATA    ---       EP4ISOINPKTS
+      000000ACH   SYMBOL    DATA     ---       EP68FIFOFLGS
+      0200E624H   SYMBOL    XDATA    ---       EP6AUTOINLENH
+      0200E625H   SYMBOL    XDATA    ---       EP6AUTOINLENL
+      0200E698H   SYMBOL    XDATA    ---       EP6BCH
+      0200E699H   SYMBOL    XDATA    ---       EP6BCL
+      0200E614H   SYMBOL    XDATA    ---       EP6CFG
+      0200E6A5H   SYMBOL    XDATA    ---       EP6CS
+      0200E6AFH   SYMBOL    XDATA    ---       EP6FIFOBCH
+      0200E6B0H   SYMBOL    XDATA    ---       EP6FIFOBCL
+      0200F800H   SYMBOL    XDATA    ---       EP6FIFOBUF
+      0200E61AH   SYMBOL    XDATA    ---       EP6FIFOCFG
+      0200E6A9H   SYMBOL    XDATA    ---       EP6FIFOFLGS
+      0200E654H   SYMBOL    XDATA    ---       EP6FIFOIE
+      0200E655H   SYMBOL    XDATA    ---       EP6FIFOIRQ
+      0200E634H   SYMBOL    XDATA    ---       EP6FIFOPFH
+      0200E635H   SYMBOL    XDATA    ---       EP6FIFOPFL
+      0200E6E2H   SYMBOL    XDATA    ---       EP6GPIFFLGSEL
+      0200E6E3H   SYMBOL    XDATA    ---       EP6GPIFPFSTOP
+      0200E6D0H   SYMBOL    XDATA    ---       EP6GPIFTCH
+      0200E6D1H   SYMBOL    XDATA    ---       EP6GPIFTCL
+      0200E6E4H   SYMBOL    XDATA    ---       EP6GPIFTRIG
+      0200E642H   SYMBOL    XDATA    ---       EP6ISOINPKTS
+      0200E626H   SYMBOL    XDATA    ---       EP8AUTOINLENH
+      0200E627H   SYMBOL    XDATA    ---       EP8AUTOINLENL
+      0200E69CH   SYMBOL    XDATA    ---       EP8BCH
+      0200E69DH   SYMBOL    XDATA    ---       EP8BCL
+      0200E615H   SYMBOL    XDATA    ---       EP8CFG
+      0200E6A6H   SYMBOL    XDATA    ---       EP8CS
+      0200E6B1H   SYMBOL    XDATA    ---       EP8FIFOBCH
+      0200E6B2H   SYMBOL    XDATA    ---       EP8FIFOBCL
+      0200FC00H   SYMBOL    XDATA    ---       EP8FIFOBUF
+      0200E61BH   SYMBOL    XDATA    ---       EP8FIFOCFG
+      0200E6AAH   SYMBOL    XDATA    ---       EP8FIFOFLGS
+      0200E656H   SYMBOL    XDATA    ---       EP8FIFOIE
+      0200E657H   SYMBOL    XDATA    ---       EP8FIFOIRQ
+      0200E636H   SYMBOL    XDATA    ---       EP8FIFOPFH
+      0200E637H   SYMBOL    XDATA    ---       EP8FIFOPFL
+      0200E6EAH   SYMBOL    XDATA    ---       EP8GPIFFLGSEL
+      0200E6EBH   SYMBOL    XDATA    ---       EP8GPIFPFSTOP
+      0200E6D0H   SYMBOL    XDATA    ---       EP8GPIFTCH
+      0200E6D1H   SYMBOL    XDATA    ---       EP8GPIFTCL
+      0200E6ECH   SYMBOL    XDATA    ---       EP8GPIFTRIG
+      0200E643H   SYMBOL    XDATA    ---       EP8ISOINPKTS
+      0200E65EH   SYMBOL    XDATA    ---       EPIE
+      0200E65FH   SYMBOL    XDATA    ---       EPIRQ
+      000000D8H.5 SYMBOL    BIT      ---       ERESI
+      0200E664H   SYMBOL    XDATA    ---       ERRCNTLIM
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 26
+
+
+      0100080EH   SYMBOL    CODE     ---       ER_END
+      000000A8H.4 SYMBOL    BIT      ---       ES0
+      000000A8H.6 SYMBOL    BIT      ---       ES1
+      000000A8H.1 SYMBOL    BIT      ---       ET0
+      000000A8H.3 SYMBOL    BIT      ---       ET1
+      000000A8H.5 SYMBOL    BIT      ---       ET2
+      000000E8H.0 SYMBOL    BIT      ---       EUSB
+      000000A8H.0 SYMBOL    BIT      ---       EX0
+      000000A8H.2 SYMBOL    BIT      ---       EX1
+      000000C8H.3 SYMBOL    BIT      ---       EXEN2
+      000000C8H.6 SYMBOL    BIT      ---       EXF2
+      00000091H   SYMBOL    DATA     ---       EXIF
+      0200E67BH   SYMBOL    XDATA    ---       EXTAUTODAT1
+      0200E67CH   SYMBOL    XDATA    ---       EXTAUTODAT2
+      000000D0H.5 SYMBOL    BIT      ---       F0
+      0200E609H   SYMBOL    XDATA    ---       FIFOPINPOLAR
+      0200E604H   SYMBOL    XDATA    ---       FIFORESET
+      000000D0H.1 SYMBOL    BIT      ---       FL
+      0200E6CCH   SYMBOL    XDATA    ---       FLOWEDGE
+      0200E6C8H   SYMBOL    XDATA    ---       FLOWEQ0CTL
+      0200E6C9H   SYMBOL    XDATA    ---       FLOWEQ1CTL
+      0200E6C7H   SYMBOL    XDATA    ---       FLOWLOGIC
+      0200E6C6H   SYMBOL    XDATA    ---       FLOWSTATE
+      0200E6CBH   SYMBOL    XDATA    ---       FLOWSTB
+      0200E6CDH   SYMBOL    XDATA    ---       FLOWSTBHPERIOD
+      0200E687H   SYMBOL    XDATA    ---       FNADDR
+      0200E509H   SYMBOL    XDATA    ---       GPCR2
+      0200E6F5H   SYMBOL    XDATA    ---       GPIFABORT
+      0200E6C4H   SYMBOL    XDATA    ---       GPIFADRH
+      0200E6C5H   SYMBOL    XDATA    ---       GPIFADRL
+      0200E6C3H   SYMBOL    XDATA    ---       GPIFCTLCFG
+      0200E60CH   SYMBOL    XDATA    ---       GPIFHOLDAMOUNT
+      0200E6C1H   SYMBOL    XDATA    ---       GPIFIDLECS
+      0200E6C2H   SYMBOL    XDATA    ---       GPIFIDLECTL
+      0200E660H   SYMBOL    XDATA    ---       GPIFIE
+      0200E661H   SYMBOL    XDATA    ---       GPIFIRQ
+      0200E6F3H   SYMBOL    XDATA    ---       GPIFREADYCFG
+      0200E6F4H   SYMBOL    XDATA    ---       GPIFREADYSTAT
+      000000BDH   SYMBOL    DATA     ---       GPIFSGLDATH
+      000000BFH   SYMBOL    DATA     ---       GPIFSGLDATLNOX
+      000000BEH   SYMBOL    DATA     ---       GPIFSGLDATLX
+      0200E6D1H   SYMBOL    XDATA    ---       GPIFTCB0
+      0200E6D0H   SYMBOL    XDATA    ---       GPIFTCB1
+      0200E6CFH   SYMBOL    XDATA    ---       GPIFTCB2
+      0200E6CEH   SYMBOL    XDATA    ---       GPIFTCB3
+      000000BBH   SYMBOL    DATA     ---       GPIFTRIG
+      0200E6C0H   SYMBOL    XDATA    ---       GPIFWFSELECT
+      0200E400H   SYMBOL    XDATA    ---       GPIF_WAVE_DATA
+      0200E678H   SYMBOL    XDATA    ---       I2CS
+      0200E67AH   SYMBOL    XDATA    ---       I2CTL
+      0200E679H   SYMBOL    XDATA    ---       I2DAT
+      0200E658H   SYMBOL    XDATA    ---       IBNIE
+      0200E659H   SYMBOL    XDATA    ---       IBNIRQ
+      000000A8H   SYMBOL    DATA     ---       IE
+      00000088H.1 SYMBOL    BIT      ---       IE0
+      00000088H.3 SYMBOL    BIT      ---       IE1
+      0200E601H   SYMBOL    XDATA    ---       IFCONFIG
+      0200E648H   SYMBOL    XDATA    ---       INPKTEND
+      000000A1H   SYMBOL    DATA     ---       INT2CLR
+      0200E666H   SYMBOL    XDATA    ---       INT2IVEC
+      000000A2H   SYMBOL    DATA     ---       INT4CLR
+      0200E667H   SYMBOL    XDATA    ---       INT4IVEC
+      000000D8H.3 SYMBOL    BIT      ---       INT6
+      0200E668H   SYMBOL    XDATA    ---       INTSETUP
+      00000080H   SYMBOL    DATA     ---       IOA
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 27
+
+
+      00000090H   SYMBOL    DATA     ---       IOB
+      000000A0H   SYMBOL    DATA     ---       IOC
+      000000B0H   SYMBOL    DATA     ---       IOD
+      000000B1H   SYMBOL    DATA     ---       IOE
+      000000B8H   SYMBOL    DATA     ---       IP
+      00000088H.0 SYMBOL    BIT      ---       IT0
+      00000088H.2 SYMBOL    BIT      ---       IT1
+      0200E686H   SYMBOL    XDATA    ---       MICROFRAME
+      00000092H   SYMBOL    DATA     ---       MPAGE
+      0200E65AH   SYMBOL    XDATA    ---       NAKIE
+      0200E65BH   SYMBOL    XDATA    ---       NAKIRQ
+      000000B2H   SYMBOL    DATA     ---       OEA
+      000000B3H   SYMBOL    DATA     ---       OEB
+      000000B4H   SYMBOL    DATA     ---       OEC
+      000000B5H   SYMBOL    DATA     ---       OED
+      000000B6H   SYMBOL    DATA     ---       OEE
+      0200E649H   SYMBOL    XDATA    ---       OUTPKTEND
+      000000D0H.2 SYMBOL    BIT      ---       OV
+      000000D0H.0 SYMBOL    BIT      ---       P
+      00000087H   SYMBOL    DATA     ---       PCON
+      000000F8H.1 SYMBOL    BIT      ---       PI2C
+      0200E602H   SYMBOL    XDATA    ---       PINFLAGSAB
+      0200E603H   SYMBOL    XDATA    ---       PINFLAGSCD
+      0200E670H   SYMBOL    XDATA    ---       PORTACFG
+      0200E671H   SYMBOL    XDATA    ---       PORTCCFG
+      0200E672H   SYMBOL    XDATA    ---       PORTECFG
+      000000B8H.4 SYMBOL    BIT      ---       PS0
+      000000B8H.6 SYMBOL    BIT      ---       PS1
+      000000D0H   SYMBOL    DATA     ---       PSW
+      000000B8H.1 SYMBOL    BIT      ---       PT0
+      000000B8H.3 SYMBOL    BIT      ---       PT1
+      000000B8H.5 SYMBOL    BIT      ---       PT2
+      000000F8H.0 SYMBOL    BIT      ---       PUSB
+      000000B8H.0 SYMBOL    BIT      ---       PX0
+      000000B8H.2 SYMBOL    BIT      ---       PX1
+      00000098H.2 SYMBOL    BIT      ---       RB8
+      000000C0H.2 SYMBOL    BIT      ---       RB81
+      000000CBH   SYMBOL    DATA     ---       RCAP2H
+      000000CAH   SYMBOL    DATA     ---       RCAP2L
+      000000C8H.5 SYMBOL    BIT      ---       RCLK
+      00000098H.4 SYMBOL    BIT      ---       REN
+      000000C0H.4 SYMBOL    BIT      ---       REN1
+      000000D8H.4 SYMBOL    BIT      ---       RESI
+      0200E480H   SYMBOL    XDATA    ---       RES_WAVEDATA_END
+      0200E60BH   SYMBOL    XDATA    ---       REVCTL
+      0200E60AH   SYMBOL    XDATA    ---       REVID
+      00000098H.0 SYMBOL    BIT      ---       RI
+      000000C0H.0 SYMBOL    BIT      ---       RI1
+      000000D0H.3 SYMBOL    BIT      ---       RS0
+      000000D0H.4 SYMBOL    BIT      ---       RS1
+      00000099H   SYMBOL    DATA     ---       SBUF0
+      000000C1H   SYMBOL    DATA     ---       SBUF1
+      00000098H   SYMBOL    DATA     ---       SCON0
+      000000C0H   SYMBOL    DATA     ---       SCON1
+      00000080H.6 SYMBOL    BIT      ---       SEL
+      0200E6B8H   SYMBOL    XDATA    ---       SETUPDAT
+      00000098H.7 SYMBOL    BIT      ---       SM0
+      000000C0H.7 SYMBOL    BIT      ---       SM01
+      00000098H.6 SYMBOL    BIT      ---       SM1
+      000000C0H.6 SYMBOL    BIT      ---       SM11
+      00000098H.5 SYMBOL    BIT      ---       SM2
+      000000C0H.5 SYMBOL    BIT      ---       SM21
+      000000D8H.7 SYMBOL    BIT      ---       SMOD1
+      00000081H   SYMBOL    DATA     ---       SP
+      0200E6B5H   SYMBOL    XDATA    ---       SUDPTRCTL
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 28
+
+
+      0200E6B3H   SYMBOL    XDATA    ---       SUDPTRH
+      0200E6B4H   SYMBOL    XDATA    ---       SUDPTRL
+      00000000H   SYMBOL    NUMBER   ---       SUSP
+      0200E681H   SYMBOL    XDATA    ---       SUSPEND
+      000000C8H   SYMBOL    DATA     ---       T2CON
+      00000098H.3 SYMBOL    BIT      ---       TB8
+      000000C0H.3 SYMBOL    BIT      ---       TB81
+      000000C8H.4 SYMBOL    BIT      ---       TCLK
+      00000088H   SYMBOL    DATA     ---       TCON
+      0200E6F9H   SYMBOL    XDATA    ---       TESTCFG
+      00000088H.5 SYMBOL    BIT      ---       TF0
+      00000088H.7 SYMBOL    BIT      ---       TF1
+      000000C8H.7 SYMBOL    BIT      ---       TF2
+      0000008CH   SYMBOL    DATA     ---       TH0
+      0000008DH   SYMBOL    DATA     ---       TH1
+      000000CDH   SYMBOL    DATA     ---       TH2
+      00000098H.1 SYMBOL    BIT      ---       TI
+      000000C0H.1 SYMBOL    BIT      ---       TI1
+      0000008AH   SYMBOL    DATA     ---       TL0
+      0000008BH   SYMBOL    DATA     ---       TL1
+      000000CCH   SYMBOL    DATA     ---       TL2
+      00000089H   SYMBOL    DATA     ---       TMOD
+      0200E683H   SYMBOL    XDATA    ---       TOGCTL
+      00000088H.4 SYMBOL    BIT      ---       TR0
+      00000088H.6 SYMBOL    BIT      ---       TR1
+      000000C8H.2 SYMBOL    BIT      ---       TR2
+      0200E608H   SYMBOL    XDATA    ---       UART230
+      0200E67DH   SYMBOL    XDATA    ---       UDMACRCH
+      0200E67EH   SYMBOL    XDATA    ---       UDMACRCL
+      0200E67FH   SYMBOL    XDATA    ---       UDMACRCQUAL
+      0200E680H   SYMBOL    XDATA    ---       USBCS
+      0200E662H   SYMBOL    XDATA    ---       USBERRIE
+      0200E663H   SYMBOL    XDATA    ---       USBERRIRQ
+      0200E684H   SYMBOL    XDATA    ---       USBFRAMEH
+      0200E685H   SYMBOL    XDATA    ---       USBFRAMEL
+      0200E65CH   SYMBOL    XDATA    ---       USBIE
+      0200E65DH   SYMBOL    XDATA    ---       USBIRQ
+      0200E6FAH   SYMBOL    XDATA    ---       USBTEST
+      0200E682H   SYMBOL    XDATA    ---       WAKEUPCS
+      0200E6F0H   SYMBOL    XDATA    ---       XGPIFSGLDATH
+      0200E6F2H   SYMBOL    XDATA    ---       XGPIFSGLDATLNOX
+      0200E6F1H   SYMBOL    XDATA    ---       XGPIFSGLDATLX
+      010007FBH   LINE      CODE     ---       #22
+      010007FEH   LINE      CODE     ---       #23
+      010007FFH   LINE      CODE     ---       #24
+      01000801H   LINE      CODE     ---       #25
+      01000802H   LINE      CODE     ---       #27
+      01000805H   LINE      CODE     ---       #28
+      01000806H   LINE      CODE     ---       #30
+      01000809H   LINE      CODE     ---       #32
+      0100080AH   LINE      CODE     ---       #33
+      0100080BH   LINE      CODE     ---       #34
+      0100080CH   LINE      CODE     ---       #35
+      0100080DH   LINE      CODE     ---       #36
+      0100080EH   LINE      CODE     ---       #37
+
+      ---         MODULE    ---      ---       DELAY
+      0100052CH   PUBLIC    CODE     ---       _EZUSB_DELAY
+      00000000H   SYMBOL    CODE     WORD      _ICE_DUMMY_
+      0100052CH   BLOCK     ---      ---       LVL=1
+      00000018H   SYMBOL    DATA     WORD      ms
+      0100052CH   LINE      CODE     ---       #39
+      01000530H   LINE      CODE     ---       #40
+      01000530H   LINE      CODE     ---       #46
+      01000538H   LINE      CODE     ---       #47
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 29
+
+
+      0100054AH   LINE      CODE     ---       #48
+      01000554H   LINE      CODE     ---       #49
+      0100055FH   LINE      CODE     ---       #51
+      0100056CH   LINE      CODE     ---       #52
+      01000571H   LINE      CODE     ---       #53
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      ---         MODULE    ---      ---       DELAY1MS
+      0100080FH   PUBLIC    CODE     ---       EZUSB_DELAY1MS
+      000000D0H.6 SYMBOL    BIT      ---       AC
+      000000E0H   SYMBOL    DATA     ---       ACC
+      0000009AH   SYMBOL    DATA     ---       APTR1H
+      0000009BH   SYMBOL    DATA     ---       APTR1L
+      0000009AH   SYMBOL    DATA     ---       AUTOPTR1H
+      0000009BH   SYMBOL    DATA     ---       AUTOPTR1L
+      0000009AH   SYMBOL    DATA     ---       AUTOPTRH1
+      0000009DH   SYMBOL    DATA     ---       AUTOPTRH2
+      0000009BH   SYMBOL    DATA     ---       AUTOPTRL1
+      0000009EH   SYMBOL    DATA     ---       AUTOPTRL2
+      000000AFH   SYMBOL    DATA     ---       AUTOPTRSETUP
+      000000F0H   SYMBOL    DATA     ---       B
+      0200E606H   SYMBOL    XDATA    ---       BPADDRH
+      0200E607H   SYMBOL    XDATA    ---       BPADDRL
+      0200E605H   SYMBOL    XDATA    ---       BREAKPT
+      0000008EH   SYMBOL    DATA     ---       CKCON
+      0200E665H   SYMBOL    XDATA    ---       CLRERRCNT
+      0200E600H   SYMBOL    XDATA    ---       CPUCS
+      000000C8H.0 SYMBOL    BIT      ---       CP_RL2
+      0200E6FBH   SYMBOL    XDATA    ---       CT1
+      0200E6FCH   SYMBOL    XDATA    ---       CT2
+      0200E6FDH   SYMBOL    XDATA    ---       CT3
+      0200E6FEH   SYMBOL    XDATA    ---       CT4
+      000000D0H.7 SYMBOL    BIT      ---       CY
+      000000C8H.1 SYMBOL    BIT      ---       C_T2
+      0200E6F8H   SYMBOL    XDATA    ---       DBUG
+      00000000H   SYMBOL    NUMBER   ---       DELAY1MS
+      00000083H   SYMBOL    DATA     ---       DPH
+      00000085H   SYMBOL    DATA     ---       DPH1
+      00000082H   SYMBOL    DATA     ---       DPL
+      00000084H   SYMBOL    DATA     ---       DPL1
+      00000086H   SYMBOL    DATA     ---       DPS
+      000000A8H.7 SYMBOL    BIT      ---       EA
+      0200E62AH   SYMBOL    XDATA    ---       ECC1B0
+      0200E62BH   SYMBOL    XDATA    ---       ECC1B1
+      0200E62CH   SYMBOL    XDATA    ---       ECC1B2
+      0200E62DH   SYMBOL    XDATA    ---       ECC2B0
+      0200E62EH   SYMBOL    XDATA    ---       ECC2B1
+      0200E62FH   SYMBOL    XDATA    ---       ECC2B2
+      0200E628H   SYMBOL    XDATA    ---       ECCCFG
+      0200E629H   SYMBOL    XDATA    ---       ECCRESET
+      000000E8H.1 SYMBOL    BIT      ---       EI2C
+      000000D8H   SYMBOL    DATA     ---       EICON
+      000000E8H   SYMBOL    DATA     ---       EIE
+      000000E8H.2 SYMBOL    BIT      ---       EIEX4
+      000000E8H.3 SYMBOL    BIT      ---       EIEX5
+      000000E8H.4 SYMBOL    BIT      ---       EIEX6
+      000000F8H   SYMBOL    DATA     ---       EIP
+      000000F8H.2 SYMBOL    BIT      ---       EIPX4
+      000000F8H.3 SYMBOL    BIT      ---       EIPX5
+      000000F8H.4 SYMBOL    BIT      ---       EIPX6
+      000000BAH   SYMBOL    DATA     ---       EP01STAT
+      0200E68AH   SYMBOL    XDATA    ---       EP0BCH
+      0200E68BH   SYMBOL    XDATA    ---       EP0BCL
+      0200E740H   SYMBOL    XDATA    ---       EP0BUF
+      0200E6A0H   SYMBOL    XDATA    ---       EP0CS
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 30
+
+
+      0200E780H   SYMBOL    XDATA    ---       EP10UTBUF
+      0200E68FH   SYMBOL    XDATA    ---       EP1INBC
+      0200E7C0H   SYMBOL    XDATA    ---       EP1INBUF
+      0200E611H   SYMBOL    XDATA    ---       EP1INCFG
+      0200E6A2H   SYMBOL    XDATA    ---       EP1INCS
+      0200E68DH   SYMBOL    XDATA    ---       EP1OUTBC
+      0200E610H   SYMBOL    XDATA    ---       EP1OUTCFG
+      0200E6A1H   SYMBOL    XDATA    ---       EP1OUTCS
+      000000AAH   SYMBOL    DATA     ---       EP2468STAT
+      000000ABH   SYMBOL    DATA     ---       EP24FIFOFLGS
+      0200E620H   SYMBOL    XDATA    ---       EP2AUTOINLENH
+      0200E621H   SYMBOL    XDATA    ---       EP2AUTOINLENL
+      0200E690H   SYMBOL    XDATA    ---       EP2BCH
+      0200E691H   SYMBOL    XDATA    ---       EP2BCL
+      0200E612H   SYMBOL    XDATA    ---       EP2CFG
+      0200E6A3H   SYMBOL    XDATA    ---       EP2CS
+      0200E6ABH   SYMBOL    XDATA    ---       EP2FIFOBCH
+      0200E6ACH   SYMBOL    XDATA    ---       EP2FIFOBCL
+      0200F000H   SYMBOL    XDATA    ---       EP2FIFOBUF
+      0200E618H   SYMBOL    XDATA    ---       EP2FIFOCFG
+      0200E6A7H   SYMBOL    XDATA    ---       EP2FIFOFLGS
+      0200E650H   SYMBOL    XDATA    ---       EP2FIFOIE
+      0200E651H   SYMBOL    XDATA    ---       EP2FIFOIRQ
+      0200E630H   SYMBOL    XDATA    ---       EP2FIFOPFH
+      0200E631H   SYMBOL    XDATA    ---       EP2FIFOPFL
+      0200E6D2H   SYMBOL    XDATA    ---       EP2GPIFFLGSEL
+      0200E6D3H   SYMBOL    XDATA    ---       EP2GPIFPFSTOP
+      0200E6D0H   SYMBOL    XDATA    ---       EP2GPIFTCH
+      0200E6D1H   SYMBOL    XDATA    ---       EP2GPIFTCL
+      0200E6D4H   SYMBOL    XDATA    ---       EP2GPIFTRIG
+      0200E640H   SYMBOL    XDATA    ---       EP2ISOINPKTS
+      0200E622H   SYMBOL    XDATA    ---       EP4AUTOINLENH
+      0200E623H   SYMBOL    XDATA    ---       EP4AUTOINLENL
+      0200E694H   SYMBOL    XDATA    ---       EP4BCH
+      0200E695H   SYMBOL    XDATA    ---       EP4BCL
+      0200E613H   SYMBOL    XDATA    ---       EP4CFG
+      0200E6A4H   SYMBOL    XDATA    ---       EP4CS
+      0200E6ADH   SYMBOL    XDATA    ---       EP4FIFOBCH
+      0200E6AEH   SYMBOL    XDATA    ---       EP4FIFOBCL
+      0200F400H   SYMBOL    XDATA    ---       EP4FIFOBUF
+      0200E619H   SYMBOL    XDATA    ---       EP4FIFOCFG
+      0200E6A8H   SYMBOL    XDATA    ---       EP4FIFOFLGS
+      0200E652H   SYMBOL    XDATA    ---       EP4FIFOIE
+      0200E653H   SYMBOL    XDATA    ---       EP4FIFOIRQ
+      0200E632H   SYMBOL    XDATA    ---       EP4FIFOPFH
+      0200E633H   SYMBOL    XDATA    ---       EP4FIFOPFL
+      0200E6DAH   SYMBOL    XDATA    ---       EP4GPIFFLGSEL
+      0200E6DBH   SYMBOL    XDATA    ---       EP4GPIFPFSTOP
+      0200E6D0H   SYMBOL    XDATA    ---       EP4GPIFTCH
+      0200E6D1H   SYMBOL    XDATA    ---       EP4GPIFTCL
+      0200E6DCH   SYMBOL    XDATA    ---       EP4GPIFTRIG
+      0200E641H   SYMBOL    XDATA    ---       EP4ISOINPKTS
+      000000ACH   SYMBOL    DATA     ---       EP68FIFOFLGS
+      0200E624H   SYMBOL    XDATA    ---       EP6AUTOINLENH
+      0200E625H   SYMBOL    XDATA    ---       EP6AUTOINLENL
+      0200E698H   SYMBOL    XDATA    ---       EP6BCH
+      0200E699H   SYMBOL    XDATA    ---       EP6BCL
+      0200E614H   SYMBOL    XDATA    ---       EP6CFG
+      0200E6A5H   SYMBOL    XDATA    ---       EP6CS
+      0200E6AFH   SYMBOL    XDATA    ---       EP6FIFOBCH
+      0200E6B0H   SYMBOL    XDATA    ---       EP6FIFOBCL
+      0200F800H   SYMBOL    XDATA    ---       EP6FIFOBUF
+      0200E61AH   SYMBOL    XDATA    ---       EP6FIFOCFG
+      0200E6A9H   SYMBOL    XDATA    ---       EP6FIFOFLGS
+      0200E654H   SYMBOL    XDATA    ---       EP6FIFOIE
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 31
+
+
+      0200E655H   SYMBOL    XDATA    ---       EP6FIFOIRQ
+      0200E634H   SYMBOL    XDATA    ---       EP6FIFOPFH
+      0200E635H   SYMBOL    XDATA    ---       EP6FIFOPFL
+      0200E6E2H   SYMBOL    XDATA    ---       EP6GPIFFLGSEL
+      0200E6E3H   SYMBOL    XDATA    ---       EP6GPIFPFSTOP
+      0200E6D0H   SYMBOL    XDATA    ---       EP6GPIFTCH
+      0200E6D1H   SYMBOL    XDATA    ---       EP6GPIFTCL
+      0200E6E4H   SYMBOL    XDATA    ---       EP6GPIFTRIG
+      0200E642H   SYMBOL    XDATA    ---       EP6ISOINPKTS
+      0200E626H   SYMBOL    XDATA    ---       EP8AUTOINLENH
+      0200E627H   SYMBOL    XDATA    ---       EP8AUTOINLENL
+      0200E69CH   SYMBOL    XDATA    ---       EP8BCH
+      0200E69DH   SYMBOL    XDATA    ---       EP8BCL
+      0200E615H   SYMBOL    XDATA    ---       EP8CFG
+      0200E6A6H   SYMBOL    XDATA    ---       EP8CS
+      0200E6B1H   SYMBOL    XDATA    ---       EP8FIFOBCH
+      0200E6B2H   SYMBOL    XDATA    ---       EP8FIFOBCL
+      0200FC00H   SYMBOL    XDATA    ---       EP8FIFOBUF
+      0200E61BH   SYMBOL    XDATA    ---       EP8FIFOCFG
+      0200E6AAH   SYMBOL    XDATA    ---       EP8FIFOFLGS
+      0200E656H   SYMBOL    XDATA    ---       EP8FIFOIE
+      0200E657H   SYMBOL    XDATA    ---       EP8FIFOIRQ
+      0200E636H   SYMBOL    XDATA    ---       EP8FIFOPFH
+      0200E637H   SYMBOL    XDATA    ---       EP8FIFOPFL
+      0200E6EAH   SYMBOL    XDATA    ---       EP8GPIFFLGSEL
+      0200E6EBH   SYMBOL    XDATA    ---       EP8GPIFPFSTOP
+      0200E6D0H   SYMBOL    XDATA    ---       EP8GPIFTCH
+      0200E6D1H   SYMBOL    XDATA    ---       EP8GPIFTCL
+      0200E6ECH   SYMBOL    XDATA    ---       EP8GPIFTRIG
+      0200E643H   SYMBOL    XDATA    ---       EP8ISOINPKTS
+      0200E65EH   SYMBOL    XDATA    ---       EPIE
+      0200E65FH   SYMBOL    XDATA    ---       EPIRQ
+      000000D8H.5 SYMBOL    BIT      ---       ERESI
+      0200E664H   SYMBOL    XDATA    ---       ERRCNTLIM
+      0100081FH   SYMBOL    CODE     ---       ER_END
+      000000A8H.4 SYMBOL    BIT      ---       ES0
+      000000A8H.6 SYMBOL    BIT      ---       ES1
+      000000A8H.1 SYMBOL    BIT      ---       ET0
+      000000A8H.3 SYMBOL    BIT      ---       ET1
+      000000A8H.5 SYMBOL    BIT      ---       ET2
+      000000E8H.0 SYMBOL    BIT      ---       EUSB
+      000000A8H.0 SYMBOL    BIT      ---       EX0
+      000000A8H.2 SYMBOL    BIT      ---       EX1
+      000000C8H.3 SYMBOL    BIT      ---       EXEN2
+      000000C8H.6 SYMBOL    BIT      ---       EXF2
+      00000091H   SYMBOL    DATA     ---       EXIF
+      0200E67BH   SYMBOL    XDATA    ---       EXTAUTODAT1
+      0200E67CH   SYMBOL    XDATA    ---       EXTAUTODAT2
+      000000D0H.5 SYMBOL    BIT      ---       F0
+      0200E609H   SYMBOL    XDATA    ---       FIFOPINPOLAR
+      0200E604H   SYMBOL    XDATA    ---       FIFORESET
+      000000D0H.1 SYMBOL    BIT      ---       FL
+      0200E6CCH   SYMBOL    XDATA    ---       FLOWEDGE
+      0200E6C8H   SYMBOL    XDATA    ---       FLOWEQ0CTL
+      0200E6C9H   SYMBOL    XDATA    ---       FLOWEQ1CTL
+      0200E6C7H   SYMBOL    XDATA    ---       FLOWLOGIC
+      0200E6C6H   SYMBOL    XDATA    ---       FLOWSTATE
+      0200E6CBH   SYMBOL    XDATA    ---       FLOWSTB
+      0200E6CDH   SYMBOL    XDATA    ---       FLOWSTBHPERIOD
+      0200E687H   SYMBOL    XDATA    ---       FNADDR
+      0200E509H   SYMBOL    XDATA    ---       GPCR2
+      0200E6F5H   SYMBOL    XDATA    ---       GPIFABORT
+      0200E6C4H   SYMBOL    XDATA    ---       GPIFADRH
+      0200E6C5H   SYMBOL    XDATA    ---       GPIFADRL
+      0200E6C3H   SYMBOL    XDATA    ---       GPIFCTLCFG
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 32
+
+
+      0200E60CH   SYMBOL    XDATA    ---       GPIFHOLDAMOUNT
+      0200E6C1H   SYMBOL    XDATA    ---       GPIFIDLECS
+      0200E6C2H   SYMBOL    XDATA    ---       GPIFIDLECTL
+      0200E660H   SYMBOL    XDATA    ---       GPIFIE
+      0200E661H   SYMBOL    XDATA    ---       GPIFIRQ
+      0200E6F3H   SYMBOL    XDATA    ---       GPIFREADYCFG
+      0200E6F4H   SYMBOL    XDATA    ---       GPIFREADYSTAT
+      000000BDH   SYMBOL    DATA     ---       GPIFSGLDATH
+      000000BFH   SYMBOL    DATA     ---       GPIFSGLDATLNOX
+      000000BEH   SYMBOL    DATA     ---       GPIFSGLDATLX
+      0200E6D1H   SYMBOL    XDATA    ---       GPIFTCB0
+      0200E6D0H   SYMBOL    XDATA    ---       GPIFTCB1
+      0200E6CFH   SYMBOL    XDATA    ---       GPIFTCB2
+      0200E6CEH   SYMBOL    XDATA    ---       GPIFTCB3
+      000000BBH   SYMBOL    DATA     ---       GPIFTRIG
+      0200E6C0H   SYMBOL    XDATA    ---       GPIFWFSELECT
+      0200E400H   SYMBOL    XDATA    ---       GPIF_WAVE_DATA
+      0200E678H   SYMBOL    XDATA    ---       I2CS
+      0200E67AH   SYMBOL    XDATA    ---       I2CTL
+      0200E679H   SYMBOL    XDATA    ---       I2DAT
+      0200E658H   SYMBOL    XDATA    ---       IBNIE
+      0200E659H   SYMBOL    XDATA    ---       IBNIRQ
+      000000A8H   SYMBOL    DATA     ---       IE
+      00000088H.1 SYMBOL    BIT      ---       IE0
+      00000088H.3 SYMBOL    BIT      ---       IE1
+      0200E601H   SYMBOL    XDATA    ---       IFCONFIG
+      0200E648H   SYMBOL    XDATA    ---       INPKTEND
+      000000A1H   SYMBOL    DATA     ---       INT2CLR
+      0200E666H   SYMBOL    XDATA    ---       INT2IVEC
+      000000A2H   SYMBOL    DATA     ---       INT4CLR
+      0200E667H   SYMBOL    XDATA    ---       INT4IVEC
+      000000D8H.3 SYMBOL    BIT      ---       INT6
+      0200E668H   SYMBOL    XDATA    ---       INTSETUP
+      00000080H   SYMBOL    DATA     ---       IOA
+      00000090H   SYMBOL    DATA     ---       IOB
+      000000A0H   SYMBOL    DATA     ---       IOC
+      000000B0H   SYMBOL    DATA     ---       IOD
+      000000B1H   SYMBOL    DATA     ---       IOE
+      000000B8H   SYMBOL    DATA     ---       IP
+      00000088H.0 SYMBOL    BIT      ---       IT0
+      00000088H.2 SYMBOL    BIT      ---       IT1
+      01000818H   SYMBOL    CODE     ---       LOOP
+      0200E686H   SYMBOL    XDATA    ---       MICROFRAME
+      00000092H   SYMBOL    DATA     ---       MPAGE
+      0200E65AH   SYMBOL    XDATA    ---       NAKIE
+      0200E65BH   SYMBOL    XDATA    ---       NAKIRQ
+      000000B2H   SYMBOL    DATA     ---       OEA
+      000000B3H   SYMBOL    DATA     ---       OEB
+      000000B4H   SYMBOL    DATA     ---       OEC
+      000000B5H   SYMBOL    DATA     ---       OED
+      000000B6H   SYMBOL    DATA     ---       OEE
+      0200E649H   SYMBOL    XDATA    ---       OUTPKTEND
+      000000D0H.2 SYMBOL    BIT      ---       OV
+      000000D0H.0 SYMBOL    BIT      ---       P
+      00000087H   SYMBOL    DATA     ---       PCON
+      000000F8H.1 SYMBOL    BIT      ---       PI2C
+      0200E602H   SYMBOL    XDATA    ---       PINFLAGSAB
+      0200E603H   SYMBOL    XDATA    ---       PINFLAGSCD
+      0200E670H   SYMBOL    XDATA    ---       PORTACFG
+      0200E671H   SYMBOL    XDATA    ---       PORTCCFG
+      0200E672H   SYMBOL    XDATA    ---       PORTECFG
+      000000B8H.4 SYMBOL    BIT      ---       PS0
+      000000B8H.6 SYMBOL    BIT      ---       PS1
+      000000D0H   SYMBOL    DATA     ---       PSW
+      000000B8H.1 SYMBOL    BIT      ---       PT0
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 33
+
+
+      000000B8H.3 SYMBOL    BIT      ---       PT1
+      000000B8H.5 SYMBOL    BIT      ---       PT2
+      000000F8H.0 SYMBOL    BIT      ---       PUSB
+      000000B8H.0 SYMBOL    BIT      ---       PX0
+      000000B8H.2 SYMBOL    BIT      ---       PX1
+      00000098H.2 SYMBOL    BIT      ---       RB8
+      000000C0H.2 SYMBOL    BIT      ---       RB81
+      000000CBH   SYMBOL    DATA     ---       RCAP2H
+      000000CAH   SYMBOL    DATA     ---       RCAP2L
+      000000C8H.5 SYMBOL    BIT      ---       RCLK
+      00000098H.4 SYMBOL    BIT      ---       REN
+      000000C0H.4 SYMBOL    BIT      ---       REN1
+      000000D8H.4 SYMBOL    BIT      ---       RESI
+      0200E480H   SYMBOL    XDATA    ---       RES_WAVEDATA_END
+      0200E60BH   SYMBOL    XDATA    ---       REVCTL
+      0200E60AH   SYMBOL    XDATA    ---       REVID
+      00000098H.0 SYMBOL    BIT      ---       RI
+      000000C0H.0 SYMBOL    BIT      ---       RI1
+      000000D0H.3 SYMBOL    BIT      ---       RS0
+      000000D0H.4 SYMBOL    BIT      ---       RS1
+      00000099H   SYMBOL    DATA     ---       SBUF0
+      000000C1H   SYMBOL    DATA     ---       SBUF1
+      00000098H   SYMBOL    DATA     ---       SCON0
+      000000C0H   SYMBOL    DATA     ---       SCON1
+      00000080H.6 SYMBOL    BIT      ---       SEL
+      0200E6B8H   SYMBOL    XDATA    ---       SETUPDAT
+      00000098H.7 SYMBOL    BIT      ---       SM0
+      000000C0H.7 SYMBOL    BIT      ---       SM01
+      00000098H.6 SYMBOL    BIT      ---       SM1
+      000000C0H.6 SYMBOL    BIT      ---       SM11
+      00000098H.5 SYMBOL    BIT      ---       SM2
+      000000C0H.5 SYMBOL    BIT      ---       SM21
+      000000D8H.7 SYMBOL    BIT      ---       SMOD1
+      00000081H   SYMBOL    DATA     ---       SP
+      0200E6B5H   SYMBOL    XDATA    ---       SUDPTRCTL
+      0200E6B3H   SYMBOL    XDATA    ---       SUDPTRH
+      0200E6B4H   SYMBOL    XDATA    ---       SUDPTRL
+      0200E681H   SYMBOL    XDATA    ---       SUSPEND
+      000000C8H   SYMBOL    DATA     ---       T2CON
+      00000098H.3 SYMBOL    BIT      ---       TB8
+      000000C0H.3 SYMBOL    BIT      ---       TB81
+      000000C8H.4 SYMBOL    BIT      ---       TCLK
+      00000088H   SYMBOL    DATA     ---       TCON
+      0200E6F9H   SYMBOL    XDATA    ---       TESTCFG
+      00000088H.5 SYMBOL    BIT      ---       TF0
+      00000088H.7 SYMBOL    BIT      ---       TF1
+      000000C8H.7 SYMBOL    BIT      ---       TF2
+      0000008CH   SYMBOL    DATA     ---       TH0
+      0000008DH   SYMBOL    DATA     ---       TH1
+      000000CDH   SYMBOL    DATA     ---       TH2
+      00000098H.1 SYMBOL    BIT      ---       TI
+      000000C0H.1 SYMBOL    BIT      ---       TI1
+      0000008AH   SYMBOL    DATA     ---       TL0
+      0000008BH   SYMBOL    DATA     ---       TL1
+      000000CCH   SYMBOL    DATA     ---       TL2
+      00000089H   SYMBOL    DATA     ---       TMOD
+      0200E683H   SYMBOL    XDATA    ---       TOGCTL
+      00000088H.4 SYMBOL    BIT      ---       TR0
+      00000088H.6 SYMBOL    BIT      ---       TR1
+      000000C8H.2 SYMBOL    BIT      ---       TR2
+      0200E608H   SYMBOL    XDATA    ---       UART230
+      0200E67DH   SYMBOL    XDATA    ---       UDMACRCH
+      0200E67EH   SYMBOL    XDATA    ---       UDMACRCL
+      0200E67FH   SYMBOL    XDATA    ---       UDMACRCQUAL
+      0200E680H   SYMBOL    XDATA    ---       USBCS
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 34
+
+
+      0200E662H   SYMBOL    XDATA    ---       USBERRIE
+      0200E663H   SYMBOL    XDATA    ---       USBERRIRQ
+      0200E684H   SYMBOL    XDATA    ---       USBFRAMEH
+      0200E685H   SYMBOL    XDATA    ---       USBFRAMEL
+      0200E65CH   SYMBOL    XDATA    ---       USBIE
+      0200E65DH   SYMBOL    XDATA    ---       USBIRQ
+      0200E6FAH   SYMBOL    XDATA    ---       USBTEST
+      0200E682H   SYMBOL    XDATA    ---       WAKEUPCS
+      0200E6F0H   SYMBOL    XDATA    ---       XGPIFSGLDATH
+      0200E6F2H   SYMBOL    XDATA    ---       XGPIFSGLDATLNOX
+      0200E6F1H   SYMBOL    XDATA    ---       XGPIFSGLDATLX
+      0100080FH   LINE      CODE     ---       #48
+      01000811H   LINE      CODE     ---       #49
+      01000813H   LINE      CODE     ---       #50
+      01000816H   LINE      CODE     ---       #51
+      01000818H   LINE      CODE     ---       #53
+      01000819H   LINE      CODE     ---       #54
+      0100081BH   LINE      CODE     ---       #55
+      0100081DH   LINE      CODE     ---       #56
+      0100081FH   LINE      CODE     ---       #58
+
+      ---         MODULE    ---      ---       USBJMPTBL
+      00000045H   PUBLIC    NUMBER   ---       USB_INT2AUTOVECTOR
+      00000055H   PUBLIC    NUMBER   ---       USB_INT4AUTOVECTOR
+      01000600H   PUBLIC    CODE     ---       USB_JUMP_TABLE
+      00000000H   SYMBOL    NUMBER   ---       USBJMPTBL
+      01000043H   LINE      CODE     ---       #49
+      01000053H   LINE      CODE     ---       #53
+
+      01000600H   BLOCK     CODE     ---       LVL=0
+      01000600H   LINE      CODE     ---       #61
+      01000604H   LINE      CODE     ---       #63
+      01000608H   LINE      CODE     ---       #65
+      0100060CH   LINE      CODE     ---       #67
+      01000610H   LINE      CODE     ---       #69
+      01000614H   LINE      CODE     ---       #71
+      01000618H   LINE      CODE     ---       #73
+      0100061CH   LINE      CODE     ---       #75
+      01000620H   LINE      CODE     ---       #77
+      01000624H   LINE      CODE     ---       #79
+      01000628H   LINE      CODE     ---       #81
+      0100062CH   LINE      CODE     ---       #83
+      01000630H   LINE      CODE     ---       #85
+      01000634H   LINE      CODE     ---       #87
+      01000638H   LINE      CODE     ---       #89
+      0100063CH   LINE      CODE     ---       #91
+      01000640H   LINE      CODE     ---       #93
+      01000644H   LINE      CODE     ---       #95
+      01000648H   LINE      CODE     ---       #97
+      0100064CH   LINE      CODE     ---       #99
+      01000650H   LINE      CODE     ---       #101
+      01000654H   LINE      CODE     ---       #103
+      01000658H   LINE      CODE     ---       #105
+      0100065CH   LINE      CODE     ---       #107
+      01000660H   LINE      CODE     ---       #109
+      01000664H   LINE      CODE     ---       #111
+      01000668H   LINE      CODE     ---       #113
+      0100066CH   LINE      CODE     ---       #115
+      01000670H   LINE      CODE     ---       #117
+      01000674H   LINE      CODE     ---       #119
+      01000678H   LINE      CODE     ---       #121
+      0100067CH   LINE      CODE     ---       #123
+      01000680H   LINE      CODE     ---       #126
+      01000684H   LINE      CODE     ---       #128
+      01000688H   LINE      CODE     ---       #130
+LX51 LINKER/LOCATER V4.64.0.0                                                         05/21/2013  06:46:35  PAGE 35
+
+
+      0100068CH   LINE      CODE     ---       #132
+      01000690H   LINE      CODE     ---       #134
+      01000694H   LINE      CODE     ---       #136
+      01000698H   LINE      CODE     ---       #138
+      0100069CH   LINE      CODE     ---       #140
+      010006A0H   LINE      CODE     ---       #142
+      010006A4H   LINE      CODE     ---       #144
+      010006A8H   LINE      CODE     ---       #146
+      010006ACH   LINE      CODE     ---       #148
+      010006B0H   LINE      CODE     ---       #150
+      010006B4H   LINE      CODE     ---       #152
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      ---         MODULE    ---      ---       ?C_STARTUP
+      01000000H   PUBLIC    CODE     ---       ?C_STARTUP
+
+      ---         MODULE    ---      ---       ?C?ULCMP
+      010005AFH   PUBLIC    CODE     ---       ?C?ULCMP
+
+      ---         MODULE    ---      ---       ?C?CCASE
+      010005C0H   PUBLIC    CODE     ---       ?C?CCASE
+
+Program Size: data=45.5 xdata=4473 const=10 code=2270
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
