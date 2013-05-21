@@ -1,8 +1,0 @@
-".\bin\dscr.obj",
-".\bin\main.obj",
-".\bin\periph.obj",
-".\EZ-USB FX2LP\lib\EZUSB.LIB",
-".\EZ-USB FX2LP\lib\USBJmpTb.OBJ" 
-TO ".\bin\GPSRx Firmware" 
-
-PRINT(".\lst\GPSRx Firmware.map")
